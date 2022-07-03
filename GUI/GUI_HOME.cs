@@ -105,6 +105,9 @@ namespace GUI
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel_right = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_Giamgia = new System.Windows.Forms.Label();
+            this.cbo_Giamgia = new System.Windows.Forms.ComboBox();
             this.txt_Tongtien = new System.Windows.Forms.TextBox();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -288,19 +291,55 @@ namespace GUI
             // panelControl3
             // 
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl3.Controls.Add(this.label1);
+            this.panelControl3.Controls.Add(this.lbl_Giamgia);
+            this.panelControl3.Controls.Add(this.cbo_Giamgia);
             this.panelControl3.Controls.Add(this.txt_Tongtien);
             this.panelControl3.Controls.Add(this.btn_ThanhToan);
-            this.panelControl3.Location = new System.Drawing.Point(7, 533);
+            this.panelControl3.Location = new System.Drawing.Point(7, 499);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(518, 90);
+            this.panelControl3.Size = new System.Drawing.Size(518, 124);
             this.panelControl3.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(224, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 23);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "%";
+            // 
+            // lbl_Giamgia
+            // 
+            this.lbl_Giamgia.AutoSize = true;
+            this.lbl_Giamgia.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Giamgia.Location = new System.Drawing.Point(33, 16);
+            this.lbl_Giamgia.Name = "lbl_Giamgia";
+            this.lbl_Giamgia.Size = new System.Drawing.Size(106, 29);
+            this.lbl_Giamgia.TabIndex = 3;
+            this.lbl_Giamgia.Text = "Giảm giá";
+            // 
+            // cbo_Giamgia
+            // 
+            this.cbo_Giamgia.FormattingEnabled = true;
+            this.cbo_Giamgia.Items.AddRange(new object[] {
+            "0",
+            "10",
+            "20"});
+            this.cbo_Giamgia.Location = new System.Drawing.Point(154, 23);
+            this.cbo_Giamgia.Name = "cbo_Giamgia";
+            this.cbo_Giamgia.Size = new System.Drawing.Size(64, 24);
+            this.cbo_Giamgia.TabIndex = 2;
+            this.cbo_Giamgia.Tag = "0";
             // 
             // txt_Tongtien
             // 
             this.txt_Tongtien.BackColor = System.Drawing.Color.White;
             this.txt_Tongtien.Enabled = false;
             this.txt_Tongtien.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.txt_Tongtien.Location = new System.Drawing.Point(30, 36);
+            this.txt_Tongtien.Location = new System.Drawing.Point(28, 61);
             this.txt_Tongtien.Name = "txt_Tongtien";
             this.txt_Tongtien.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_Tongtien.Size = new System.Drawing.Size(250, 38);
@@ -313,7 +352,7 @@ namespace GUI
             this.btn_ThanhToan.ForeColor = System.Drawing.Color.Black;
             this.btn_ThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThanhToan.Image")));
             this.btn_ThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(332, 18);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(332, 43);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.Size = new System.Drawing.Size(172, 56);
             this.btn_ThanhToan.TabIndex = 0;
@@ -332,7 +371,7 @@ namespace GUI
             this.panel1.Controls.Add(this.dataGridView_DanhSachmon);
             this.panel1.Location = new System.Drawing.Point(5, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(520, 443);
+            this.panel1.Size = new System.Drawing.Size(520, 409);
             this.panel1.TabIndex = 2;
             // 
             // dataGridView_DanhSachmon
@@ -363,7 +402,7 @@ namespace GUI
             this.dataGridView_DanhSachmon.RowHeadersVisible = false;
             this.dataGridView_DanhSachmon.RowHeadersWidth = 51;
             this.dataGridView_DanhSachmon.RowTemplate.Height = 24;
-            this.dataGridView_DanhSachmon.Size = new System.Drawing.Size(520, 443);
+            this.dataGridView_DanhSachmon.Size = new System.Drawing.Size(520, 409);
             this.dataGridView_DanhSachmon.TabIndex = 0;
             // 
             // Ten_Mon
@@ -550,7 +589,6 @@ namespace GUI
                 }
                 txt_Tongtien.Text = tt.ToString();
             }
-              
         }
         private void btn_Trasua_Click(object sender, EventArgs e)
         {
