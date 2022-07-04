@@ -30,7 +30,6 @@ namespace GUI
             btn_Trasua.BackColor = Color.White;
             btn_Trasua.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btn_Trasua.ForeColor = Color.Black;
-
         }
 
         private void btn_Trasua_MouseLeave(object sender, EventArgs e)
@@ -93,8 +92,8 @@ namespace GUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_HOME));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Trasua = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -377,8 +376,8 @@ namespace GUI
             // dataGridView_DanhSachmon
             // 
             this.dataGridView_DanhSachmon.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            this.dataGridView_DanhSachmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Transparent;
+            this.dataGridView_DanhSachmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_DanhSachmon.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_DanhSachmon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_DanhSachmon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -387,14 +386,14 @@ namespace GUI
             this.So_luong,
             this.Gia_Mon});
             this.dataGridView_DanhSachmon.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(119)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_DanhSachmon.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(119)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_DanhSachmon.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_DanhSachmon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_DanhSachmon.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView_DanhSachmon.Location = new System.Drawing.Point(0, 0);
@@ -582,17 +581,16 @@ namespace GUI
         {
             float tongtien = 0;
             tongtien += float.Parse(txt_Tongtien.Text);
-
-            if (cbo_Giamgia.SelectedItem.ToString() == "10")
+            if(cbo_Giamgia.SelectedItem.ToString() == "0")
+            {
+                txt_Tongtien.Text = tongtien.ToString();
+            }
+            else if (cbo_Giamgia.SelectedItem.ToString() == "10")
             {
                 tongtien *= (float)0.9;
                 txt_Tongtien.Text = tongtien.ToString();
             }
-            else
-            {
-                txt_Tongtien.Text = tongtien.ToString();
-            }
-
+  
         }
         private void TongTien()
         {
@@ -620,7 +618,7 @@ namespace GUI
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
             int tong = 0;
-            BUS_Hoadon.Instance.Luu_IdBill(DateTime.Now, tong); // lưu vào hoadon(id tự tăng)
+            BUS_Hoadon.Instance.Luu_IdBill(DateTime.Now,tong); // lưu vào hoadon(id tự tăng)
             DataTable tb = BUS_Hoadon.Instance.Lay_IdBill();
             int idbill = int.Parse(tb.Rows[0].ItemArray[0].ToString());
             for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)

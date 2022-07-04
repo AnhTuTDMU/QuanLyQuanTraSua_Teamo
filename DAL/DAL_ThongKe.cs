@@ -20,12 +20,12 @@ namespace DAL
 
         private DAL_ThongKe() { }
 
-        public DataTable Thongke_Ngay(DateTime ngay)
+        public DataTable Xem_Hoadonchitiet(int id)
         {
             SqlConnection Conn = ConnecData.conncetion();
-            SqlCommand command = new SqlCommand("proc_ThongkeNgay", Conn);
-            command.CommandType = CommandType.StoredProcedure; command.Parameters.Add("@ngay", SqlDbType.DateTime2);
-            command.Parameters["@ngay"].Value = ngay;
+            SqlCommand command = new SqlCommand("proc_XemHDChitiet", Conn);
+            command.CommandType = CommandType.StoredProcedure; command.Parameters.Add("@id", SqlDbType.Int);
+            command.Parameters["@id"].Value = id;
             Conn.Open();
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = command;
@@ -34,12 +34,16 @@ namespace DAL
             return dt;
             Conn.Close();
         }
-        public DataTable Xem_Hoadonchitiet(int id)
+        public DataTable Thongke_NhieuNgay(DateTime ngay1, DateTime ngay2)
         {
             SqlConnection Conn = ConnecData.conncetion();
-            SqlCommand command = new SqlCommand("proc_XemHDChitiet", Conn);
-            command.CommandType = CommandType.StoredProcedure; command.Parameters.Add("@id", SqlDbType.Int);
-            command.Parameters["@id"].Value = id;
+            SqlCommand command = new SqlCommand("proc_ThongKe_Nhieungay", Conn);
+            command.CommandType = CommandType.StoredProcedure; 
+            command.Parameters.Add("@ngay1", SqlDbType.DateTime2);
+            command.Parameters.Add("@ngay2", SqlDbType.DateTime2);
+
+            command.Parameters["@ngay1"].Value = ngay1;
+            command.Parameters["@ngay2"].Value = ngay2;
             Conn.Open();
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = command;

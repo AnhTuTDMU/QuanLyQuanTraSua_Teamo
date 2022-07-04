@@ -18,14 +18,13 @@ namespace BUS
         }
 
         private BUS_Thongke() { }
-
-        public DataTable ThongKe_TheoNgay(DateTime ngay)
-        {
-            return DAL_ThongKe.Instance.Thongke_Ngay(ngay);
-        }
         public DataTable Xem_Hoadonchitiet(int id)
         {
             return DAL_ThongKe.Instance.Xem_Hoadonchitiet(id);
+        }
+        public DataTable ThongKe_NhieuNgay(DateTime ngay1,DateTime ngay2)
+        {
+            return DAL_ThongKe.Instance.Thongke_NhieuNgay(ngay1, ngay2);
         }
     }
 }

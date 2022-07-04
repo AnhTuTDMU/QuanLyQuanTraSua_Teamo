@@ -39,8 +39,8 @@ namespace GUI
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_Xem = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_HDCT)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +82,7 @@ namespace GUI
             this.btn_XuatExcelHDCT.Text = "Xuất Excel";
             this.btn_XuatExcelHDCT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_XuatExcelHDCT.UseVisualStyleBackColor = true;
+            this.btn_XuatExcelHDCT.Click += new System.EventHandler(this.btn_XuatExcelHDCT_Click);
             // 
             // pictureBox1
             // 
@@ -147,14 +148,6 @@ namespace GUI
             this.panel2.Size = new System.Drawing.Size(329, 89);
             this.panel2.TabIndex = 7;
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(61, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 30);
-            this.textBox1.TabIndex = 7;
-            // 
             // btn_Xem
             // 
             this.btn_Xem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,6 +161,14 @@ namespace GUI
             this.btn_Xem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Xem.UseVisualStyleBackColor = true;
             this.btn_Xem.Click += new System.EventHandler(this.btn_Xem_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(61, 28);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(111, 30);
+            this.textBox1.TabIndex = 7;
             // 
             // GUI_Hoadonchitiet
             // 

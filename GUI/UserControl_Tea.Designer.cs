@@ -115,7 +115,7 @@ namespace GUI
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel2);
             this.Name = "UserControl_Tea";
-            this.Size = new System.Drawing.Size(382, 390);
+            this.Size = new System.Drawing.Size(385, 392);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
