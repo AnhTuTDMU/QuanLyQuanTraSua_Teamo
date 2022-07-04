@@ -188,7 +188,6 @@ namespace GUI
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.button3);
@@ -432,7 +431,7 @@ namespace GUI
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.labelControl2.Location = new System.Drawing.Point(41, 16);
+            this.labelControl2.Location = new System.Drawing.Point(41, 8);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(93, 33);
             this.labelControl2.TabIndex = 1;

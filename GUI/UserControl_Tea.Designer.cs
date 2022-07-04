@@ -75,7 +75,7 @@ namespace GUI
             this.lbl_Gia.Appearance.Options.UseBorderColor = true;
             this.lbl_Gia.Appearance.Options.UseFont = true;
             this.lbl_Gia.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.lbl_Gia.Location = new System.Drawing.Point(3, 344);
+            this.lbl_Gia.Location = new System.Drawing.Point(5, 342);
             this.lbl_Gia.Name = "lbl_Gia";
             this.lbl_Gia.Size = new System.Drawing.Size(99, 35);
             this.lbl_Gia.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace GUI
             this.lbl_Title.Appearance.Options.UseBorderColor = true;
             this.lbl_Title.Appearance.Options.UseFont = true;
             this.lbl_Title.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lbl_Title.Location = new System.Drawing.Point(3, 3);
+            this.lbl_Title.Location = new System.Drawing.Point(5, 5);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(203, 34);
             this.lbl_Title.TabIndex = 1;
@@ -105,7 +105,7 @@ namespace GUI
             this.panel2.Controls.Add(this.lbl_Gia);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(401, 383);
+            this.panel2.Size = new System.Drawing.Size(378, 384);
             this.panel2.TabIndex = 2;
             // 
             // UserControl_Tea
@@ -115,7 +115,7 @@ namespace GUI
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel2);
             this.Name = "UserControl_Tea";
-            this.Size = new System.Drawing.Size(409, 390);
+            this.Size = new System.Drawing.Size(382, 390);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
