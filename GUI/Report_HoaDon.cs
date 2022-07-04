@@ -19,7 +19,7 @@ namespace GUI
             InitializeComponent();
             showHD();
         }
-        public Report_HoaDon(List<DTO_HoaDon> hoadon)
+        public Report_HoaDon(List<DTO_HoaDon> hoadon) // in lai hóa đơn
         {
             InitializeComponent();
             XtraReport1 xreop = new XtraReport1();

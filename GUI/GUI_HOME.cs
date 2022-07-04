@@ -326,13 +326,13 @@ namespace GUI
             this.cbo_Giamgia.FormattingEnabled = true;
             this.cbo_Giamgia.Items.AddRange(new object[] {
             "0",
-            "10",
-            "20"});
+            "10"});
             this.cbo_Giamgia.Location = new System.Drawing.Point(154, 23);
             this.cbo_Giamgia.Name = "cbo_Giamgia";
             this.cbo_Giamgia.Size = new System.Drawing.Size(64, 24);
             this.cbo_Giamgia.TabIndex = 2;
             this.cbo_Giamgia.Tag = "0";
+            this.cbo_Giamgia.SelectedValueChanged += new System.EventHandler(this.cbo_Giamgia_SelectedValueChanged);
             // 
             // txt_Tongtien
             // 
@@ -578,6 +578,22 @@ namespace GUI
             dataGridView_DanhSachmon.Rows.Clear();
             txt_Tongtien.Text = "0";
         }
+        private void cbo_Giamgia_SelectedValueChanged(object sender, EventArgs e)
+        {
+            float tongtien = 0;
+            tongtien += float.Parse(txt_Tongtien.Text);
+
+            if (cbo_Giamgia.SelectedItem.ToString() == "10")
+            {
+                tongtien *= (float)0.9;
+                txt_Tongtien.Text = tongtien.ToString();
+            }
+            else
+            {
+                txt_Tongtien.Text = tongtien.ToString();
+            }
+
+        }
         private void TongTien()
         {
             int tt = 0;
@@ -638,5 +654,7 @@ namespace GUI
             Image returnImage = Image.FromStream(ms);
             return returnImage;
         }
+
+      
     }
 }
