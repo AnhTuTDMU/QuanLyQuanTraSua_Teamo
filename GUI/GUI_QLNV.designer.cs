@@ -1,4 +1,5 @@
-﻿namespace GUI
+﻿#pragma warning disable 0436
+namespace GUI
 {
    partial class GUI_QLNV
     {

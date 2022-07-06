@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-
+#pragma warning disable 0436
 namespace GUI
 {
     static class Program

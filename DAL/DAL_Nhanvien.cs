@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+#pragma warning disable 0436
 namespace DAL
 {
     public class DAL_Nhanvien
@@ -113,8 +114,9 @@ namespace DAL
             da.SelectCommand = command;
             DataTable dt = new DataTable();
             da.Fill(dt);
-            return dt;
             Conn.Close();
+            return dt;
+            
 
         }
 
@@ -130,8 +132,9 @@ namespace DAL
             command.Parameters["@ten"].Value = tendn;
             DataTable data = new DataTable();
             data.Load(command.ExecuteReader());
-            return data;
             Conn.Close();
+            return data;
+            
         }
     }
 }

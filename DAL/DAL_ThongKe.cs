@@ -31,8 +31,9 @@ namespace DAL
             da.SelectCommand = command;
             DataTable dt = new DataTable();
             da.Fill(dt);
-            return dt;
             Conn.Close();
+            return dt;
+          
         }
         public DataTable Thongke_NhieuNgay(DateTime ngay1, DateTime ngay2)
         {
@@ -49,8 +50,9 @@ namespace DAL
             da.SelectCommand = command;
             DataTable dt = new DataTable();
             da.Fill(dt);
-            return dt;
             Conn.Close();
+            return dt;
+            
         }
     }
 }

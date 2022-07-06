@@ -54,8 +54,9 @@ namespace DAL
             da.SelectCommand = command;
             DataTable dt = new DataTable();
             da.Fill(dt);
-            return dt;
             Conn.Close();
+            return dt;
+            
         }
         // lưu id bill vào bảng hoadon
         public void Luu_idBill(DateTime Ngaylapbill,int giamgia,int TT)
@@ -86,8 +87,9 @@ namespace DAL
             da.SelectCommand = command;
             DataTable dt = new DataTable();
             da.Fill(dt);
-            return dt;
             Conn.Close();
+            return dt;
+            
         }
         // capnhat Tổng tiền xuống bảng Hoadon
         public void Capnhat_TT(int id,int TT)

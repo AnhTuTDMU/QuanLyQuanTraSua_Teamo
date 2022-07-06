@@ -170,7 +170,7 @@ namespace GUI
             this.xrCrossTab1,
             this.xrTable1,
             this.xrLabel4});
-            this.ReportHeader.HeightF = 196.6667F;
+            this.ReportHeader.HeightF = 205.5F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // xrLine1
@@ -253,7 +253,7 @@ namespace GUI
             this.xrTable1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(64.16669F, 171.6667F);
+            this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(64.16666F, 180.5F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -281,7 +281,7 @@ namespace GUI
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
             this.xrTableCell1.Text = "Tên món";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell1.Weight = 2.3830292079617075D;
+            this.xrTableCell1.Weight = 2.8696524043034426D;
             // 
             // xrTableCell2
             // 
@@ -294,7 +294,7 @@ namespace GUI
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
             this.xrTableCell2.Text = "Số lượng";
             this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell2.Weight = 1.1467217720485796D;
+            this.xrTableCell2.Weight = 1.3808849289553113D;
             // 
             // xrTableCell3
             // 
@@ -307,7 +307,7 @@ namespace GUI
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
             this.xrTableCell3.Text = "Giá";
             this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell3.Weight = 2.0336371474456847D;
+            this.xrTableCell3.Weight = 2.4489128726298079D;
             // 
             // xrLabel4
             // 

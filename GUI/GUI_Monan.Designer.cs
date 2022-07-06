@@ -1,4 +1,4 @@
-﻿
+﻿#pragma warning disable 0436
 namespace GUI
 {
     partial class GUI_Monan
