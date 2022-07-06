@@ -39,15 +39,8 @@ namespace GUI
             List<DTO_HoaDon> hd = new List<DTO_HoaDon>();
             
             DTO_HoaDon dto = new DTO_HoaDon();
-          
-            /* foreach(DataGridViewRow item in dataGridView_HDCT.SelectedRows)
-             {
-                 MessageBox.Show(item..Value.ToString());
-             }*/
             for (int i = 0; i < dataGridView_HDCT.Rows.Count -1 ; i++)
             {
-            //    int rowindex = dataGridView_HDCT.CurrentCell.RowIndex;
-           //     dataGridView_HDCT.Rows[i].Cells["ID"].Value.ToString();
                 string mon = dataGridView_HDCT.Rows[i].Cells["Ten_mon"].Value.ToString();
                 int sl = int.Parse(dataGridView_HDCT.Rows[i].Cells["So_luong"].Value.ToString());
                 int gia = int.Parse(dataGridView_HDCT.Rows[i].Cells["Gia"].Value.ToString());

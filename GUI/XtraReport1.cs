@@ -15,6 +15,7 @@ namespace GUI
         public XtraReport1()
         {
             InitializeComponent();
+      
         }
         public void Nhapdata(List<DTO_HoaDon> hd)
         {
@@ -23,6 +24,8 @@ namespace GUI
             objectDataSource1.DataSource = hd;
 
             xr_Ngay.Text = DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
+            
+            
         }
 
     }

@@ -16,7 +16,6 @@ namespace GUI
 {
     public partial class GUI_HOME : DevExpress.XtraEditors.XtraForm
     {
-        private int TongTienBill = 0;
         
         public GUI_HOME()
         {
@@ -92,8 +91,8 @@ namespace GUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_HOME));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Trasua = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -111,14 +110,15 @@ namespace GUI
             this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView_DanhSachmon = new System.Windows.Forms.DataGridView();
-            this.Ten_Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.So_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gia_Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Ten_Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.So_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia_Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -331,7 +331,7 @@ namespace GUI
             this.cbo_Giamgia.Size = new System.Drawing.Size(64, 24);
             this.cbo_Giamgia.TabIndex = 2;
             this.cbo_Giamgia.Tag = "0";
-            this.cbo_Giamgia.SelectedValueChanged += new System.EventHandler(this.cbo_Giamgia_SelectedValueChanged);
+            this.cbo_Giamgia.SelectedIndexChanged += new System.EventHandler(this.cbo_Giamgia_SelectedIndexChanged);
             // 
             // txt_Tongtien
             // 
@@ -376,24 +376,25 @@ namespace GUI
             // dataGridView_DanhSachmon
             // 
             this.dataGridView_DanhSachmon.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Transparent;
-            this.dataGridView_DanhSachmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            this.dataGridView_DanhSachmon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_DanhSachmon.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_DanhSachmon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView_DanhSachmon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_DanhSachmon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Ten_Mon,
             this.So_luong,
-            this.Gia_Mon});
+            this.Gia_Mon,
+            this.ThanhTien});
             this.dataGridView_DanhSachmon.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(119)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_DanhSachmon.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 7.8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(119)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_DanhSachmon.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_DanhSachmon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_DanhSachmon.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView_DanhSachmon.Location = new System.Drawing.Point(0, 0);
@@ -403,28 +404,6 @@ namespace GUI
             this.dataGridView_DanhSachmon.RowTemplate.Height = 24;
             this.dataGridView_DanhSachmon.Size = new System.Drawing.Size(520, 409);
             this.dataGridView_DanhSachmon.TabIndex = 0;
-            // 
-            // Ten_Mon
-            // 
-            this.Ten_Mon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ten_Mon.HeaderText = "Tên Món";
-            this.Ten_Mon.MinimumWidth = 6;
-            this.Ten_Mon.Name = "Ten_Mon";
-            this.Ten_Mon.ReadOnly = true;
-            // 
-            // So_luong
-            // 
-            this.So_luong.HeaderText = "Số lượng";
-            this.So_luong.MinimumWidth = 6;
-            this.So_luong.Name = "So_luong";
-            this.So_luong.Width = 125;
-            // 
-            // Gia_Mon
-            // 
-            this.Gia_Mon.HeaderText = "Giá Món";
-            this.Gia_Mon.MinimumWidth = 6;
-            this.Gia_Mon.Name = "Gia_Mon";
-            this.Gia_Mon.Width = 125;
             // 
             // panelControl2
             // 
@@ -489,6 +468,35 @@ namespace GUI
             this.flowLayoutPanel1.Size = new System.Drawing.Size(507, 626);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
+            // Ten_Mon
+            // 
+            this.Ten_Mon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ten_Mon.HeaderText = "Tên Món";
+            this.Ten_Mon.MinimumWidth = 6;
+            this.Ten_Mon.Name = "Ten_Mon";
+            this.Ten_Mon.ReadOnly = true;
+            // 
+            // So_luong
+            // 
+            this.So_luong.HeaderText = "Số lượng";
+            this.So_luong.MinimumWidth = 6;
+            this.So_luong.Name = "So_luong";
+            this.So_luong.Width = 125;
+            // 
+            // Gia_Mon
+            // 
+            this.Gia_Mon.HeaderText = "Giá Món";
+            this.Gia_Mon.MinimumWidth = 6;
+            this.Gia_Mon.Name = "Gia_Mon";
+            this.Gia_Mon.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Width = 125;
+            // 
             // GUI_HOME
             // 
             this.ActiveGlowColor = System.Drawing.Color.Transparent;
@@ -551,24 +559,22 @@ namespace GUI
                     int flag = 0;
                     for(int i =0; i < dataGridView_DanhSachmon.Rows.Count ; i++)
                     {
-                        if(dataGridView_DanhSachmon.Rows[i].Cells[0].Value.ToString() == uc.lbl_Title.Text)
+                        if (dataGridView_DanhSachmon.Rows[i].Cells[0].Value.ToString() == uc.lbl_Title.Text)
                         {
                             dataGridView_DanhSachmon.Rows[i].Cells[1].Value = int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[1].Value.ToString()) + 1;
                             dataGridView_DanhSachmon.Rows[i].Cells[2].Value = int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString()) + int.Parse(uc.lbl_Gia.Text);
-                            
+                           
                             flag = 1;
                             break;
                         }
-                        
                     }
-                    if(flag == 0)
+                
+                    if (flag == 0)
                     {
                         dataGridView_DanhSachmon.Rows.Add(new object[] { uc.lbl_Title.Text,1, uc.lbl_Gia.Text });
                     }
+                   
                 }
-         
-                TongTien();
-
             };
         }
 
@@ -577,32 +583,35 @@ namespace GUI
             dataGridView_DanhSachmon.Rows.Clear();
             txt_Tongtien.Text = "0";
         }
-        private void cbo_Giamgia_SelectedValueChanged(object sender, EventArgs e)
-        {
-            float tongtien = 0;
-            tongtien += float.Parse(txt_Tongtien.Text);
-            if(cbo_Giamgia.SelectedItem.ToString() == "0")
-            {
-                txt_Tongtien.Text = tongtien.ToString();
-            }
-            else if (cbo_Giamgia.SelectedItem.ToString() == "10")
-            {
-                tongtien *= (float)0.9;
-                txt_Tongtien.Text = tongtien.ToString();
-            }
-  
-        }
         private void TongTien()
         {
-            int tt = 0;
+            float tt = 0;
             if (dataGridView_DanhSachmon.Rows.Count != 0)
             {
                 for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
                 {
-                    tt += int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString());
+                    tt += int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[3].Value.ToString());
                 }
                 txt_Tongtien.Text = tt.ToString();
             }
+        }
+        private void cbo_Giamgia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (int.Parse(cbo_Giamgia.SelectedItem.ToString()) == 0)
+            {
+                for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
+                {
+                    dataGridView_DanhSachmon.Rows[i].Cells[3].Value = int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString());
+                }
+            }
+            else
+            {
+                for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
+                {
+                    dataGridView_DanhSachmon.Rows[i].Cells[3].Value = int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString()) * (float)0.9;
+                }
+            }
+            TongTien();
         }
         private void btn_Trasua_Click(object sender, EventArgs e)
         {
@@ -618,12 +627,17 @@ namespace GUI
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
             int tong = 0;
-            BUS_Hoadon.Instance.Luu_IdBill(DateTime.Now,tong); // lưu vào hoadon(id tự tăng)
+            if(cbo_Giamgia.SelectedItem.ToString() == null)
+            {
+                MessageBox.Show("Vui lòng chọn giảm giá hay không ");
+                return;
+            }
+            BUS_Hoadon.Instance.Luu_IdBill(DateTime.Now,int.Parse(cbo_Giamgia.SelectedItem.ToString()),tong); // lưu vào hoadon(id tự tăng)
             DataTable tb = BUS_Hoadon.Instance.Lay_IdBill();
             int idbill = int.Parse(tb.Rows[0].ItemArray[0].ToString());
             for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
             {
-                BUS_Hoadon.Instance.Luu_Bill(idbill,dataGridView_DanhSachmon.Rows[i].Cells[0].Value.ToString(), int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[1].Value.ToString()), int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString()));
+                BUS_Hoadon.Instance.Luu_Bill(idbill,dataGridView_DanhSachmon.Rows[i].Cells[0].Value.ToString(), int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[1].Value.ToString()), int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString()),int.Parse(cbo_Giamgia.SelectedItem.ToString()), int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[3].Value.ToString()));
             }
             MessageBox.Show("Thanh toán thành công " + "Tổng tiền là : " + txt_Tongtien.Text);
             tong = int.Parse(txt_Tongtien.Text);
@@ -653,6 +667,6 @@ namespace GUI
             return returnImage;
         }
 
-      
+    
     }
 }

@@ -29,21 +29,29 @@ namespace GUI
         public void showHD()
         {
             string ten;
-            int sl, gia;
+            int sl, gia, giamgia, thanhtien;
             List<DTO_HoaDon> hd = new List<DTO_HoaDon>();
-            DataTable b = BUS_Hoadon.Instance.Lay_IdBill();
+            DataTable b = BUS_Hoadon.Instance.Lay_IdBill(); // layid hiện tại 
             int id = int.Parse(b.Rows[0].ItemArray[0].ToString());
-            DataTable tb = BUS_Hoadon.Instance.Xem_Bill(id);
+            DataTable tb = BUS_Hoadon.Instance.Xem_Bill(id); 
             for (int i = 0; i < tb.Rows.Count; i++)
             {
                 ten = tb.Rows[i]["Ten_mon"].ToString();
                 sl = int.Parse(tb.Rows[i]["So_luong"].ToString());
                 gia = int.Parse(tb.Rows[i]["Gia"].ToString());
-                hd.Add(new DTO_HoaDon(ten, sl, gia));
+                giamgia = int.Parse(tb.Rows[i]["GiamGia"].ToString());
+                thanhtien = int.Parse(tb.Rows[i]["ThanhTien"].ToString());
+                hd.Add(new DTO_HoaDon(ten, sl, gia, giamgia,thanhtien));
             }
+        
             XtraReport1 xreop = new XtraReport1();
             xreop.Nhapdata(hd);
             documentViewer1.DocumentSource = xreop;
+        }
+
+        private void documentViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

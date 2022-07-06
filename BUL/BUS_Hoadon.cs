@@ -19,9 +19,9 @@ namespace BUS
         }
 
         // Lưu bill
-        public void Luu_Bill(int id,string ten,int sl,int gia)
+        public void Luu_Bill(int id,string ten,int sl,int gia, int giamgia, int thanhtien)
         {
-            DAL_Hoadon.Instance.luu_Bill( id,ten,sl,gia);
+            DAL_Hoadon.Instance.luu_Bill( id,ten,sl,gia,giamgia, thanhtien);
         }
         // Xem Bill
         public DataTable Xem_Bill(int id)
@@ -29,9 +29,9 @@ namespace BUS
            return DAL_Hoadon.Instance.Xem_Bill(id);
         }
         // Lưu bill xuống bảng hoadon
-        public void Luu_IdBill(DateTime ngaylapbill,int tt)
+        public void Luu_IdBill(DateTime ngaylapbill,int giamgia,int tt)
         {
-            DAL_Hoadon.Instance.Luu_idBill(ngaylapbill, tt);
+            DAL_Hoadon.Instance.Luu_idBill(ngaylapbill,giamgia,tt);
         }
         // Lấy id bill từ hoadon
         public DataTable Lay_IdBill()

@@ -18,7 +18,7 @@ namespace DAL
             private set { instance = value; }
         }
         // lưu bill xuống bảng Hoadonchitiet
-        public void luu_Bill(int id,string ten,int sl, int gia)
+        public void luu_Bill(int id,string ten,int sl, int gia,int giamgia, int thanhtien)
         {
             SqlConnection Conn = ConnecData.conncetion();
             SqlCommand command = new SqlCommand("proc_insertData_test", Conn);
@@ -27,11 +27,16 @@ namespace DAL
             command.Parameters.Add("@ten", SqlDbType.NVarChar, 50);
             command.Parameters.Add("@sl", SqlDbType.Int);
             command.Parameters.Add("@gia", SqlDbType.Int);
+            command.Parameters.Add("@giamgia", SqlDbType.Int);
+            command.Parameters.Add("@thanhtien", SqlDbType.Int);
+
 
             command.Parameters["@id"].Value = id;
             command.Parameters["@ten"].Value = ten;
             command.Parameters["@sl"].Value = sl;
             command.Parameters["@gia"].Value = gia;
+            command.Parameters["@giamgia"].Value = giamgia;
+            command.Parameters["@thanhtien"].Value = thanhtien;
 
             Conn.Open();
             command.ExecuteNonQuery();
@@ -53,16 +58,18 @@ namespace DAL
             Conn.Close();
         }
         // lưu id bill vào bảng hoadon
-        public void Luu_idBill(DateTime Ngaylapbill,int TT)
+        public void Luu_idBill(DateTime Ngaylapbill,int giamgia,int TT)
         {
 
             SqlConnection Conn = ConnecData.conncetion();
             SqlCommand command = new SqlCommand("proc_luuid", Conn);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ngaylapbill", SqlDbType.DateTime);
+            command.Parameters.Add("@giamgia", SqlDbType.Int);
             command.Parameters.Add("@TT", SqlDbType.Int);
 
             command.Parameters["@ngaylapbill"].Value = Ngaylapbill;
+            command.Parameters["@giamgia"].Value = giamgia;
             command.Parameters["@TT"].Value = TT;
 
             Conn.Open();

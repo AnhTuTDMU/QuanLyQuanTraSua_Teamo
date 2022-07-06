@@ -26,12 +26,13 @@ namespace GUI
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_Mon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn So_luong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gia_Mon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Giamgia;
         private System.Windows.Forms.ComboBox cbo_Giamgia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_Mon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn So_luong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gia_Mon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         // private UserControl_Tea userControl_Tea2;
         //private UserControl_Tea userControl_Tea3;
         // private UserControl_Tea userControl_Tea4;

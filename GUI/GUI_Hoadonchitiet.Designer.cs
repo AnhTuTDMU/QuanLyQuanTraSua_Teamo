@@ -75,7 +75,7 @@ namespace GUI
             this.btn_XuatExcelHDCT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XuatExcelHDCT.Image = ((System.Drawing.Image)(resources.GetObject("btn_XuatExcelHDCT.Image")));
             this.btn_XuatExcelHDCT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XuatExcelHDCT.Location = new System.Drawing.Point(621, 80);
+            this.btn_XuatExcelHDCT.Location = new System.Drawing.Point(621, 82);
             this.btn_XuatExcelHDCT.Name = "btn_XuatExcelHDCT";
             this.btn_XuatExcelHDCT.Size = new System.Drawing.Size(162, 57);
             this.btn_XuatExcelHDCT.TabIndex = 2;
@@ -98,7 +98,7 @@ namespace GUI
             // 
             this.lbl_Hoadonchitiet.AutoSize = true;
             this.lbl_Hoadonchitiet.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Hoadonchitiet.Location = new System.Drawing.Point(309, 41);
+            this.lbl_Hoadonchitiet.Location = new System.Drawing.Point(310, 30);
             this.lbl_Hoadonchitiet.Name = "lbl_Hoadonchitiet";
             this.lbl_Hoadonchitiet.Size = new System.Drawing.Size(271, 38);
             this.lbl_Hoadonchitiet.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace GUI
             this.btn_InHoadon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_InHoadon.Image = ((System.Drawing.Image)(resources.GetObject("btn_InHoadon.Image")));
             this.btn_InHoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_InHoadon.Location = new System.Drawing.Point(621, 160);
+            this.btn_InHoadon.Location = new System.Drawing.Point(621, 163);
             this.btn_InHoadon.Name = "btn_InHoadon";
             this.btn_InHoadon.Size = new System.Drawing.Size(162, 57);
             this.btn_InHoadon.TabIndex = 2;
@@ -122,7 +122,7 @@ namespace GUI
             // 
             this.separatorControl1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.separatorControl1.LineThickness = 5;
-            this.separatorControl1.Location = new System.Drawing.Point(329, 82);
+            this.separatorControl1.Location = new System.Drawing.Point(338, 71);
             this.separatorControl1.Name = "separatorControl1";
             this.separatorControl1.Size = new System.Drawing.Size(231, 32);
             this.separatorControl1.TabIndex = 5;
