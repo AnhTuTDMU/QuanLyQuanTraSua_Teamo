@@ -12,6 +12,7 @@ using BUS;
 using DevExpress.XtraSplashScreen;
 using System.Threading;
 using DTO;
+#pragma warning disable 0436
 namespace GUI
 {
     

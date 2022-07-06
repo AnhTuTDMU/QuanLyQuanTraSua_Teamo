@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 using BUS;
+#pragma warning disable 0436
 namespace GUI
 {
     public partial class GUI_MDI_Home : DevExpress.XtraBars.Ribbon.RibbonForm

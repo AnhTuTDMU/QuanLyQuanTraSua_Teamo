@@ -11,7 +11,7 @@ using BUS;
 using System.IO;
 using System.Globalization;
 using System.Threading;
-
+#pragma warning disable 0436
 namespace GUI
 {
     public partial class GUI_HOME : DevExpress.XtraEditors.XtraForm
@@ -110,15 +110,15 @@ namespace GUI
             this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView_DanhSachmon = new System.Windows.Forms.DataGridView();
+            this.Ten_Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.So_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia_Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Ten_Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.So_luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gia_Mon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -405,6 +405,35 @@ namespace GUI
             this.dataGridView_DanhSachmon.Size = new System.Drawing.Size(520, 409);
             this.dataGridView_DanhSachmon.TabIndex = 0;
             // 
+            // Ten_Mon
+            // 
+            this.Ten_Mon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ten_Mon.HeaderText = "Tên Món";
+            this.Ten_Mon.MinimumWidth = 6;
+            this.Ten_Mon.Name = "Ten_Mon";
+            this.Ten_Mon.ReadOnly = true;
+            // 
+            // So_luong
+            // 
+            this.So_luong.HeaderText = "Số lượng";
+            this.So_luong.MinimumWidth = 6;
+            this.So_luong.Name = "So_luong";
+            this.So_luong.Width = 125;
+            // 
+            // Gia_Mon
+            // 
+            this.Gia_Mon.HeaderText = "Giá Món";
+            this.Gia_Mon.MinimumWidth = 6;
+            this.Gia_Mon.Name = "Gia_Mon";
+            this.Gia_Mon.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.Width = 125;
+            // 
             // panelControl2
             // 
             this.panelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
@@ -467,35 +496,6 @@ namespace GUI
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(507, 626);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // Ten_Mon
-            // 
-            this.Ten_Mon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ten_Mon.HeaderText = "Tên Món";
-            this.Ten_Mon.MinimumWidth = 6;
-            this.Ten_Mon.Name = "Ten_Mon";
-            this.Ten_Mon.ReadOnly = true;
-            // 
-            // So_luong
-            // 
-            this.So_luong.HeaderText = "Số lượng";
-            this.So_luong.MinimumWidth = 6;
-            this.So_luong.Name = "So_luong";
-            this.So_luong.Width = 125;
-            // 
-            // Gia_Mon
-            // 
-            this.Gia_Mon.HeaderText = "Giá Món";
-            this.Gia_Mon.MinimumWidth = 6;
-            this.Gia_Mon.Name = "Gia_Mon";
-            this.Gia_Mon.Width = 125;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.Width = 125;
             // 
             // GUI_HOME
             // 

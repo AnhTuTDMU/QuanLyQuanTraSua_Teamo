@@ -12,6 +12,7 @@ using OfficeOpenXml;
 using Excel = Microsoft.Office.Interop.Excel;
 using BUS;
 using DTO;
+#pragma warning disable 0436
 namespace GUI
 {
     public partial class GUI_Hoadonchitiet : Form

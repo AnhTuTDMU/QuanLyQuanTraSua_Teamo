@@ -11,6 +11,7 @@ using System.IO;
 using OfficeOpenXml;
 using Excel = Microsoft.Office.Interop.Excel;
 using BUS;
+#pragma warning disable 0436
 namespace GUI
 {
     public partial class GUI_DoanhThu : DevExpress.XtraEditors.XtraForm
