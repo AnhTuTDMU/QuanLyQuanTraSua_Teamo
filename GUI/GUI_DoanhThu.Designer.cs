@@ -30,10 +30,12 @@ namespace GUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_DoanhThu));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_MoFileExcel = new System.Windows.Forms.Panel();
             this.btn_XemCTHD = new System.Windows.Forms.Button();
             this.btn_XuatExcel = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.dateEdit_Tungay = new DevExpress.XtraEditors.DateEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,32 +44,32 @@ namespace GUI
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_MoFileExcel.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_Tungay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_Tungay.Properties)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // btn_MoFileExcel
             // 
-            this.panel1.Controls.Add(this.btn_XemCTHD);
-            this.panel1.Controls.Add(this.btn_XuatExcel);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1294, 347);
-            this.panel1.TabIndex = 2;
+            this.btn_MoFileExcel.Controls.Add(this.button1);
+            this.btn_MoFileExcel.Controls.Add(this.btn_XemCTHD);
+            this.btn_MoFileExcel.Controls.Add(this.btn_XuatExcel);
+            this.btn_MoFileExcel.Controls.Add(this.panel4);
+            this.btn_MoFileExcel.Controls.Add(this.panel3);
+            this.btn_MoFileExcel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_MoFileExcel.Location = new System.Drawing.Point(0, 0);
+            this.btn_MoFileExcel.Name = "btn_MoFileExcel";
+            this.btn_MoFileExcel.Size = new System.Drawing.Size(1294, 347);
+            this.btn_MoFileExcel.TabIndex = 2;
             // 
             // btn_XemCTHD
             // 
@@ -94,7 +96,7 @@ namespace GUI
             this.btn_XuatExcel.ForeColor = System.Drawing.Color.Black;
             this.btn_XuatExcel.Image = ((System.Drawing.Image)(resources.GetObject("btn_XuatExcel.Image")));
             this.btn_XuatExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_XuatExcel.Location = new System.Drawing.Point(319, 213);
+            this.btn_XuatExcel.Location = new System.Drawing.Point(339, 213);
             this.btn_XuatExcel.Name = "btn_XuatExcel";
             this.btn_XuatExcel.Size = new System.Drawing.Size(178, 58);
             this.btn_XuatExcel.TabIndex = 11;
@@ -115,6 +117,28 @@ namespace GUI
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(765, 107);
             this.panel4.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(374, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 50);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(591, 40);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(142, 22);
+            this.dateEdit1.TabIndex = 3;
+            this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit_Tungay_EditValueChanged);
             // 
             // dateEdit_Tungay
             // 
@@ -206,27 +230,20 @@ namespace GUI
             this.dataGridView1.Size = new System.Drawing.Size(1294, 254);
             this.dataGridView1.TabIndex = 0;
             // 
-            // dateEdit1
+            // button1
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(591, 40);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(142, 22);
-            this.dateEdit1.TabIndex = 3;
-            this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit_Tungay_EditValueChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(374, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(554, 215);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(212, 56);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Mở File Excel";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GUI_DoanhThu
             // 
@@ -234,12 +251,15 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1294, 601);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_MoFileExcel);
             this.Name = "GUI_DoanhThu";
             this.Text = "THỐNG KÊ DOANH THU";
-            this.panel1.ResumeLayout(false);
+            this.btn_MoFileExcel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_Tungay.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit_Tungay.Properties)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -247,15 +267,12 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel btn_MoFileExcel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
@@ -269,5 +286,6 @@ namespace GUI
         private DevExpress.XtraEditors.DateEdit dateEdit_Tungay;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

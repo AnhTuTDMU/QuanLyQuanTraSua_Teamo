@@ -75,6 +75,50 @@ namespace GUI
 
             }
         }
-        
+        private void ImportExcel(string path)
+        {
+            using (ExcelPackage excelPackage = new ExcelPackage(new FileInfo(path)))
+            {
+                ExcelWorksheet excelWorksheet = excelPackage.Workbook.Worksheets[0];
+                DataTable dataTable = new DataTable();
+                for (int i = excelWorksheet.Dimension.Start.Column; i <= excelWorksheet.Dimension.End.Column; i++)
+                {
+                    dataTable.Columns.Add(excelWorksheet.Cells[1, i].Value.ToString());
+                }
+                for (int i = excelWorksheet.Dimension.Start.Row + 1; i <= excelWorksheet.Dimension.End.Row; i++)
+                {
+                    List<string> listRows = new List<string>();
+                    for (int j = excelWorksheet.Dimension.Start.Column; j <= excelWorksheet.Dimension.End.Column; j++)
+                    {
+                        listRows.Add(excelWorksheet.Cells[i, j].Value.ToString());
+                    }
+                    dataTable.Rows.Add(listRows.ToArray());
+                }
+                this.dataGridView1.Columns.Clear();
+                this.dataGridView1.DataSource = null;
+                this.dataGridView1.DataSource = dataTable;
+            }
+        }
+        // Mở file Excel
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Import Excel";
+            op.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    ImportExcel(op.FileName);
+                    MessageBox.Show("Nhập File Thành Công  !!!");
+                }
+                catch (Exception ex)
+                {
+                    Clipboard.SetText(ex.ToString());
+
+                    MessageBox.Show("Nhập File không thành công" + ex);
+                }
+            }
+        }
     }
 }
