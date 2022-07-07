@@ -90,10 +90,15 @@ namespace GUI
                 MessageBox.Show("Món đã tồn tại không thể thêm ", "Báo Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            BUS_Danhsachmon.Instance.Them_Mon_an(txt_title.Text, txt_giaban.Text, ConvertImageTobyes(img));
-            MessageBox.Show("Thêm thành công món", "Thông báo !", MessageBoxButtons.OK);
-            Clear();
-            dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Monan();
+            else if(txt_title.Text != dataGridView1.CurrentRow.Cells[0].Value.ToString())
+            {
+                BUS_Danhsachmon.Instance.Them_Mon_an(txt_title.Text, txt_giaban.Text, ConvertImageTobyes(img));
+                MessageBox.Show("Thêm thành công món", "Thông báo !", MessageBoxButtons.OK);
+                Clear();
+                dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Monan();
+            }
+            
+            
         }
 
         // lưu đồ uống
@@ -105,16 +110,18 @@ namespace GUI
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin và chọn ảnh để có thể lưu món", "Báo Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        /*    else if (txt_title.Text.Equals(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
+            else if (txt_title.Text.Equals(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
             {
                 MessageBox.Show("Món đã tồn tại không thể thêm ", "Báo Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }*/
-            BUS_Danhsachmon.Instance.Them_Thuc_uong(txt_title.Text, txt_giaban.Text, ConvertImageTobyes(img));
-
-            MessageBox.Show("Thêm thành công món", "Thông báo !", MessageBoxButtons.OK);
-            Clear();
-            dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Douong();
+            }
+            else if (txt_title.Text != dataGridView1.CurrentRow.Cells[0].Value.ToString())
+            {
+                BUS_Danhsachmon.Instance.Them_Thuc_uong(txt_title.Text, txt_giaban.Text, ConvertImageTobyes(img));
+                MessageBox.Show("Thêm thành công món", "Thông báo !", MessageBoxButtons.OK);
+                Clear();
+                dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Douong();
+            }
         }
 
         // xem món ăn
@@ -146,7 +153,7 @@ namespace GUI
 
         }
 
-        // sửa món ăn hoặc đồ uống
+        // sửa thức uống
         private void button2_Click(object sender, EventArgs e)
         {
             if (txt_title.Text == "" || txt_giaban.Text == ""|| pictureBox2.Image == null)
@@ -160,16 +167,8 @@ namespace GUI
             }
             BUS_Danhsachmon.Instance.Sua_Thuc_uong(txt_title.Text, txt_giaban.Text, Savephoto());
             MessageBox.Show("Bạn đã sửa thức uống" + txt_title.Text + " thành công!", "Thông báo !", MessageBoxButtons.OK);
-            dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Douong();
             Clear();
-            return;
-
-   /*         BUS_Danhsachmon.Instance.Sua_Mon_an(txt_title.Text, txt_giaban.Text, Savephoto());
-            MessageBox.Show("Bạn đã sửa món ăn" + txt_title.Text + " thành công!", "Thông báo !", MessageBoxButtons.OK);
-            dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Monan();
-            Clear();*/
-
-
+            dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Douong();
         }
 
         //Thao tác trên datagirdview 
