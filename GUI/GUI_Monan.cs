@@ -105,11 +105,11 @@ namespace GUI
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin và chọn ảnh để có thể lưu món", "Báo Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (txt_title.Text.Equals(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
+        /*    else if (txt_title.Text.Equals(dataGridView1.CurrentRow.Cells[0].Value.ToString()))
             {
                 MessageBox.Show("Món đã tồn tại không thể thêm ", "Báo Lỗi !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
+            }*/
             BUS_Danhsachmon.Instance.Them_Thuc_uong(txt_title.Text, txt_giaban.Text, ConvertImageTobyes(img));
 
             MessageBox.Show("Thêm thành công món", "Thông báo !", MessageBoxButtons.OK);

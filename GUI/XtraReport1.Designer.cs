@@ -75,6 +75,8 @@ namespace GUI
             this.objectDataSource2 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource3 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource4 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrCrossTab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -112,7 +114,7 @@ namespace GUI
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(517.5F, 22.5F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(572.4999F, 22.5F);
             this.xrTable2.StylePriority.UseBorders = false;
             // 
             // xrTableRow2
@@ -120,7 +122,8 @@ namespace GUI
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell4,
             this.xrTableCell5,
-            this.xrTableCell6});
+            this.xrTableCell6,
+            this.xrTableCell10});
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.Weight = 2.4666665649414066D;
             // 
@@ -137,7 +140,7 @@ namespace GUI
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
             this.xrTableCell4.Text = "xrTableCell4";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell4.Weight = 2.2166667543629939D;
+            this.xrTableCell4.Weight = 2.0083337748210934D;
             // 
             // xrTableCell5
             // 
@@ -148,7 +151,7 @@ namespace GUI
             this.xrTableCell5.StylePriority.UseTextAlignment = false;
             this.xrTableCell5.Text = "xrTableCell5";
             this.xrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell5.Weight = 1.0666677095781858D;
+            this.xrTableCell5.Weight = 1.0500003052236144D;
             // 
             // xrTableCell6
             // 
@@ -159,7 +162,7 @@ namespace GUI
             this.xrTableCell6.StylePriority.UseTextAlignment = false;
             this.xrTableCell6.Text = "xrTableCell6";
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell6.Weight = 1.8916655918738659D;
+            this.xrTableCell6.Weight = 1.3333325322630887D;
             // 
             // ReportHeader
             // 
@@ -258,7 +261,7 @@ namespace GUI
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(517.5F, 24.99999F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(572.4999F, 24.99999F);
             this.xrTable1.StylePriority.UseBorders = false;
             // 
             // xrTableRow1
@@ -266,7 +269,8 @@ namespace GUI
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.xrTableCell1,
             this.xrTableCell2,
-            this.xrTableCell3});
+            this.xrTableCell3,
+            this.xrTableCell8});
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 1D;
             // 
@@ -281,7 +285,7 @@ namespace GUI
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
             this.xrTableCell1.Text = "Tên món";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell1.Weight = 2.8696524043034426D;
+            this.xrTableCell1.Weight = 2.5999485531175841D;
             // 
             // xrTableCell2
             // 
@@ -294,7 +298,7 @@ namespace GUI
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
             this.xrTableCell2.Text = "Số lượng";
             this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell2.Weight = 1.3808849289553113D;
+            this.xrTableCell2.Weight = 1.3593091265556576D;
             // 
             // xrTableCell3
             // 
@@ -307,7 +311,7 @@ namespace GUI
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
             this.xrTableCell3.Text = "Giá";
             this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell3.Weight = 2.4489128726298079D;
+            this.xrTableCell3.Weight = 1.7261053188196216D;
             // 
             // xrLabel4
             // 
@@ -362,12 +366,12 @@ namespace GUI
             // 
             // xrTable4
             // 
-            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(285.8333F, 0F);
+            this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(265.0001F, 0F);
             this.xrTable4.Name = "xrTable4";
             this.xrTable4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable4.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
-            this.xrTable4.SizeF = new System.Drawing.SizeF(295.8333F, 23.33333F);
+            this.xrTable4.SizeF = new System.Drawing.SizeF(371.6665F, 23.33333F);
             // 
             // xrTableRow4
             // 
@@ -390,7 +394,7 @@ namespace GUI
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
             this.xrTableCell9.Text = "Giảm giá";
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell9.Weight = 1.0816906194401059D;
+            this.xrTableCell9.Weight = 1.0647890052545594D;
             // 
             // xrTable_Gia
             // 
@@ -405,7 +409,7 @@ namespace GUI
             this.xrTable_Gia.StylePriority.UseTextAlignment = false;
             this.xrTable_Gia.Text = "Giamgia";
             this.xrTable_Gia.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTable_Gia.Weight = 1.918309071085873D;
+            this.xrTable_Gia.Weight = 2.704223299123043D;
             // 
             // xrLabel2
             // 
@@ -429,12 +433,12 @@ namespace GUI
             this.xrTable3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(285.8333F, 23.33333F);
+            this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(265.0001F, 23.33333F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow3});
-            this.xrTable3.SizeF = new System.Drawing.SizeF(295.8333F, 25F);
+            this.xrTable3.SizeF = new System.Drawing.SizeF(371.6665F, 25F);
             this.xrTable3.StylePriority.UseBorders = false;
             this.xrTable3.StylePriority.UseTextAlignment = false;
             this.xrTable3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -456,7 +460,7 @@ namespace GUI
             this.xrTableCell7.StylePriority.UseFont = false;
             this.xrTableCell7.StylePriority.UseForeColor = false;
             this.xrTableCell7.Text = "Tổng Tiền :";
-            this.xrTableCell7.Weight = 1.1327948058544455D;
+            this.xrTableCell7.Weight = 0.87457437676280381D;
             // 
             // xrTable_Tongtien
             // 
@@ -468,7 +472,7 @@ namespace GUI
             this.xrTable_Tongtien.Summary = xrSummary1;
             this.xrTable_Tongtien.Text = "Giá\r\n";
             this.xrTable_Tongtien.TextFormatString = "{0:c0}";
-            this.xrTable_Tongtien.Weight = 2.0089393748485991D;
+            this.xrTable_Tongtien.Weight = 2.221138952177748D;
             // 
             // objectDataSource1
             // 
@@ -490,6 +494,29 @@ namespace GUI
             this.objectDataSource4.Constructor = objectConstructorInfo1;
             this.objectDataSource4.DataSource = typeof(DTO.DTO_HoaDon);
             this.objectDataSource4.Name = "objectDataSource4";
+            // 
+            // xrTableCell8
+            // 
+            this.xrTableCell8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell8.ForeColor = System.Drawing.Color.Blue;
+            this.xrTableCell8.Multiline = true;
+            this.xrTableCell8.Name = "xrTableCell8";
+            this.xrTableCell8.StylePriority.UseFont = false;
+            this.xrTableCell8.StylePriority.UseForeColor = false;
+            this.xrTableCell8.StylePriority.UseTextAlignment = false;
+            this.xrTableCell8.Text = "Thành tiền";
+            this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrTableCell8.Weight = 1.7261053188196216D;
+            // 
+            // xrTableCell10
+            // 
+            this.xrTableCell10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ThanhTien1]")});
+            this.xrTableCell10.Multiline = true;
+            this.xrTableCell10.Name = "xrTableCell10";
+            this.xrTableCell10.StylePriority.UseTextAlignment = false;
+            this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrTableCell10.Weight = 1.3333325322630887D;
             // 
             // XtraReport1
             // 
@@ -572,5 +599,7 @@ namespace GUI
         private DevExpress.DataAccess.ObjectBinding.ObjectDataSource objectDataSource3;
         private DevExpress.XtraReports.UI.XRLine xrLine1;
         private DevExpress.DataAccess.ObjectBinding.ObjectDataSource objectDataSource4;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell8;
     }
 }
