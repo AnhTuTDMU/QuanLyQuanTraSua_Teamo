@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="DTO_DanhSachmon.cs" />
     <Compile Include="DTO_HoaDon.cs" />
+    <Compile Include="DTO_KhachHang.cs" />
     <Compile Include="DTO_Nhanvien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

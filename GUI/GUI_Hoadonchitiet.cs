@@ -45,8 +45,10 @@ namespace GUI
                 string mon = dataGridView_HDCT.Rows[i].Cells["Ten_mon"].Value.ToString();
                 int sl = int.Parse(dataGridView_HDCT.Rows[i].Cells["So_luong"].Value.ToString());
                 int gia = int.Parse(dataGridView_HDCT.Rows[i].Cells["Gia"].Value.ToString());
+                int giamgia = int.Parse(dataGridView_HDCT.Rows[i].Cells["GiamGia"].Value.ToString());
+                int ThanhTien = int.Parse(dataGridView_HDCT.Rows[i].Cells["ThanhTien"].Value.ToString()); 
                
-                hd.Add(new DTO_HoaDon(mon, sl, gia));
+                hd.Add(new DTO_HoaDon(mon, sl, gia,giamgia,ThanhTien));
             }
             XtraReport1 xreop = new XtraReport1();
             xreop.Nhapdata(hd);

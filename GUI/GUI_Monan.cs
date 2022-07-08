@@ -15,6 +15,7 @@ namespace GUI
 {
     public partial class GUI_Monan : DevExpress.XtraEditors.XtraForm
     {
+        private string mon;
         public GUI_Monan()
         {
             InitializeComponent();
@@ -127,12 +128,14 @@ namespace GUI
         // xem món ăn
         private void btn_XemMonan_Click(object sender, EventArgs e)
         {
+            mon = "Mon_an";
             dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Monan();
         }
 
         // xem đồ uống
         private void btn_Xemdouong_Click(object sender, EventArgs e)
         {
+            mon = "Do_uong";
             dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Douong();
         }
 
@@ -165,10 +168,20 @@ namespace GUI
             {
                 return;
             }
-            BUS_Danhsachmon.Instance.Sua_Thuc_uong(txt_title.Text, txt_giaban.Text, Savephoto());
-            MessageBox.Show("Bạn đã sửa thức uống" + txt_title.Text + " thành công!", "Thông báo !", MessageBoxButtons.OK);
-            Clear();
-            dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Douong();
+            if(mon == "Do_uong")
+            {
+                BUS_Danhsachmon.Instance.Sua_Thuc_uong(txt_title.Text, txt_giaban.Text, Savephoto());
+                MessageBox.Show("Bạn đã sửa thức uống" + txt_title.Text + " thành công!", "Thông báo !", MessageBoxButtons.OK);
+                Clear();
+                dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Douong();
+            }
+            else if(mon == "Mon_an")
+            {
+                BUS_Danhsachmon.Instance.Sua_Mon_an(txt_title.Text, txt_giaban.Text, Savephoto());
+                MessageBox.Show("Bạn đã sửa món ăn" + txt_title.Text + " thành công!", "Thông báo !", MessageBoxButtons.OK);
+                Clear();
+                dataGridView1.DataSource = BUS_Danhsachmon.Instance.DS_Monan();
+            }
         }
 
         //Thao tác trên datagirdview 

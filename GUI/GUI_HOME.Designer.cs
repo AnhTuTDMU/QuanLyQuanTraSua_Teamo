@@ -33,6 +33,9 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn So_luong;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia_Mon;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Button btn_checkSdt;
+        private System.Windows.Forms.TextBox txt_SDT;
+        private System.Windows.Forms.Label label2;
         // private UserControl_Tea userControl_Tea2;
         //private UserControl_Tea userControl_Tea3;
         // private UserControl_Tea userControl_Tea4;

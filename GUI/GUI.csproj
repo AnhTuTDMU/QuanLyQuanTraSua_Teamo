@@ -122,6 +122,12 @@
     <Compile Include="GUI_Hoadonchitiet.Designer.cs">
       <DependentUpon>GUI_Hoadonchitiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_KhachHang.Designer.cs">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_MDI_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Hoadonchitiet.resx">
       <DependentUpon>GUI_Hoadonchitiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_KhachHang.resx">
+      <DependentUpon>GUI_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_MDI_Home.resx">
       <DependentUpon>GUI_MDI_Home.cs</DependentUpon>

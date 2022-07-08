@@ -96,5 +96,11 @@ namespace GUI
             doanhThu.MdiParent = this;
             doanhThu.Show();
         }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            GUI_KhachHang khachHang = new GUI_KhachHang();
+            khachHang.ShowDialog();
+        }
     }
 }

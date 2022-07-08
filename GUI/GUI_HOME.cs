@@ -103,6 +103,9 @@ namespace GUI
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel_right = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.btn_checkSdt = new System.Windows.Forms.Button();
+            this.txt_SDT = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Giamgia = new System.Windows.Forms.Label();
             this.cbo_Giamgia = new System.Windows.Forms.ComboBox();
@@ -290,21 +293,56 @@ namespace GUI
             // panelControl3
             // 
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl3.Controls.Add(this.btn_checkSdt);
+            this.panelControl3.Controls.Add(this.txt_SDT);
+            this.panelControl3.Controls.Add(this.label2);
             this.panelControl3.Controls.Add(this.label1);
             this.panelControl3.Controls.Add(this.lbl_Giamgia);
             this.panelControl3.Controls.Add(this.cbo_Giamgia);
             this.panelControl3.Controls.Add(this.txt_Tongtien);
             this.panelControl3.Controls.Add(this.btn_ThanhToan);
-            this.panelControl3.Location = new System.Drawing.Point(7, 499);
+            this.panelControl3.Location = new System.Drawing.Point(7, 451);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(518, 124);
+            this.panelControl3.Size = new System.Drawing.Size(518, 172);
             this.panelControl3.TabIndex = 3;
+            // 
+            // btn_checkSdt
+            // 
+            this.btn_checkSdt.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_checkSdt.ForeColor = System.Drawing.Color.Black;
+            this.btn_checkSdt.Location = new System.Drawing.Point(411, 50);
+            this.btn_checkSdt.Name = "btn_checkSdt";
+            this.btn_checkSdt.Size = new System.Drawing.Size(93, 44);
+            this.btn_checkSdt.TabIndex = 7;
+            this.btn_checkSdt.Text = "Tích điểm";
+            this.btn_checkSdt.UseVisualStyleBackColor = true;
+            this.btn_checkSdt.Click += new System.EventHandler(this.btn_checkSdt_Click);
+            // 
+            // txt_SDT
+            // 
+            this.txt_SDT.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SDT.Location = new System.Drawing.Point(274, 16);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.Size = new System.Drawing.Size(230, 28);
+            this.txt_SDT.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(33, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(235, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Số điện thoại khách hàng";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 22);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(228, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 23);
             this.label1.TabIndex = 4;
@@ -314,7 +352,8 @@ namespace GUI
             // 
             this.lbl_Giamgia.AutoSize = true;
             this.lbl_Giamgia.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Giamgia.Location = new System.Drawing.Point(33, 16);
+            this.lbl_Giamgia.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Giamgia.Location = new System.Drawing.Point(32, 79);
             this.lbl_Giamgia.Name = "lbl_Giamgia";
             this.lbl_Giamgia.Size = new System.Drawing.Size(106, 29);
             this.lbl_Giamgia.TabIndex = 3;
@@ -326,7 +365,7 @@ namespace GUI
             this.cbo_Giamgia.Items.AddRange(new object[] {
             "0",
             "10"});
-            this.cbo_Giamgia.Location = new System.Drawing.Point(154, 23);
+            this.cbo_Giamgia.Location = new System.Drawing.Point(158, 83);
             this.cbo_Giamgia.Name = "cbo_Giamgia";
             this.cbo_Giamgia.Size = new System.Drawing.Size(64, 24);
             this.cbo_Giamgia.TabIndex = 2;
@@ -338,7 +377,7 @@ namespace GUI
             this.txt_Tongtien.BackColor = System.Drawing.Color.White;
             this.txt_Tongtien.Enabled = false;
             this.txt_Tongtien.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.txt_Tongtien.Location = new System.Drawing.Point(28, 61);
+            this.txt_Tongtien.Location = new System.Drawing.Point(28, 122);
             this.txt_Tongtien.Name = "txt_Tongtien";
             this.txt_Tongtien.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_Tongtien.Size = new System.Drawing.Size(250, 38);
@@ -351,7 +390,7 @@ namespace GUI
             this.btn_ThanhToan.ForeColor = System.Drawing.Color.Black;
             this.btn_ThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThanhToan.Image")));
             this.btn_ThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(332, 43);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(341, 104);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.Size = new System.Drawing.Size(172, 56);
             this.btn_ThanhToan.TabIndex = 0;
@@ -370,7 +409,7 @@ namespace GUI
             this.panel1.Controls.Add(this.dataGridView_DanhSachmon);
             this.panel1.Location = new System.Drawing.Point(5, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(520, 409);
+            this.panel1.Size = new System.Drawing.Size(520, 361);
             this.panel1.TabIndex = 2;
             // 
             // dataGridView_DanhSachmon
@@ -402,7 +441,7 @@ namespace GUI
             this.dataGridView_DanhSachmon.RowHeadersVisible = false;
             this.dataGridView_DanhSachmon.RowHeadersWidth = 51;
             this.dataGridView_DanhSachmon.RowTemplate.Height = 24;
-            this.dataGridView_DanhSachmon.Size = new System.Drawing.Size(520, 409);
+            this.dataGridView_DanhSachmon.Size = new System.Drawing.Size(520, 361);
             this.dataGridView_DanhSachmon.TabIndex = 0;
             // 
             // Ten_Mon
@@ -540,7 +579,7 @@ namespace GUI
 
                 Title = name,
                 Gia = gia,
-                icon = byteArrayToImage(img)
+                icon = byteImage(img)
             };
            
             flowLayoutPanel1.Controls.Add(w);
@@ -577,7 +616,26 @@ namespace GUI
                 }
             };
         }
+        private void btn_Trasua_Click(object sender, EventArgs e)
+        {
 
+            flowLayoutPanel1.Controls.Clear();
+            DataTable dt = BUS_Danhsachmon.Instance.DS_Douong();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                AddItem(dt.Rows[i].ItemArray[0].ToString(), dt.Rows[i].ItemArray[1].ToString(), (byte[])dt.Rows[i].ItemArray[2]);
+            }
+        }
+        private void btn_Anvat_Click(object sender, EventArgs e)
+        {
+
+            flowLayoutPanel1.Controls.Clear();
+            DataTable dt = BUS_Danhsachmon.Instance.DS_Monan();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                AddItem(dt.Rows[i].ItemArray[0].ToString(), dt.Rows[i].ItemArray[1].ToString(), (byte[])dt.Rows[i].ItemArray[2]);
+            }
+        }
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
             dataGridView_DanhSachmon.Rows.Clear();
@@ -597,37 +655,27 @@ namespace GUI
         }
         private void cbo_Giamgia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (int.Parse(cbo_Giamgia.SelectedItem.ToString()) == 0)
-            {
-                for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
+                if (int.Parse(cbo_Giamgia.SelectedItem.ToString()) == 0)
                 {
-                    dataGridView_DanhSachmon.Rows[i].Cells[3].Value = int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString());
+                    for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
+                    {
+                        dataGridView_DanhSachmon.Rows[i].Cells[3].Value = int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString());
+                    }
                 }
-            }
-            else
-            {
-                for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
+                else
                 {
-                    dataGridView_DanhSachmon.Rows[i].Cells[3].Value = int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString()) * (float)0.9;
+                    for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
+                    {
+                        dataGridView_DanhSachmon.Rows[i].Cells[3].Value = int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString()) * (float)0.9;
+                    }
                 }
+                TongTien();
             }
-            TongTien();
-        }
-        private void btn_Trasua_Click(object sender, EventArgs e)
-        {
-           
-            flowLayoutPanel1.Controls.Clear();
-            DataTable dt = BUS_Danhsachmon.Instance.DS_Douong();
-            for(int i = 0; i < dt.Rows.Count; i++)
-            {
-                AddItem(dt.Rows[i].ItemArray[0].ToString(), dt.Rows[i].ItemArray[1].ToString(), (byte[])dt.Rows[i].ItemArray[2]);
-            }
-        }
 
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
             int tong = 0;
-            if(cbo_Giamgia.SelectedItem.ToString() == null)
+            if(cbo_Giamgia.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng chọn giảm giá hay không ");
                 return;
@@ -647,26 +695,26 @@ namespace GUI
             report.ShowDialog();
             dataGridView_DanhSachmon.Rows.Clear();
             txt_Tongtien.Text = "0";
-            
         }
-
-        private void btn_Anvat_Click(object sender, EventArgs e)
-        {
-
-            flowLayoutPanel1.Controls.Clear();
-            DataTable dt = BUS_Danhsachmon.Instance.DS_Monan();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                AddItem(dt.Rows[i].ItemArray[0].ToString(), dt.Rows[i].ItemArray[1].ToString(), (byte[])dt.Rows[i].ItemArray[2]);
-            }
-        }
-        public Image byteArrayToImage(byte[] byteArrayIn) // hàm lấy load ảnh lên từ sql
+        
+        public Image byteImage(byte[] byteArrayIn) // hàm lấy load ảnh lên từ sql
         {
             MemoryStream ms = new MemoryStream(byteArrayIn);
             Image returnImage = Image.FromStream(ms);
             return returnImage;
         }
 
-    
+        private void btn_checkSdt_Click(object sender, EventArgs e)
+        {
+            if(BUS_Khachhang.Instance.XemTT_Khachhang(txt_SDT.Text))
+            {
+                DataTable tb = BUS_Khachhang.Instance.Xem_Khachhang(txt_SDT.Text);
+                MessageBox.Show("Chào " + tb.Rows[0]["TenKhachang"].ToString());
+            }
+            else
+            {
+                MessageBox.Show("Khách hàng này không tồn tại","Thông báo !",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
     }
 }

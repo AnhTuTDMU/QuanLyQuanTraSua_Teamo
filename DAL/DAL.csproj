@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="ConnecData.cs" />
     <Compile Include="DAL_Hoadon.cs" />
+    <Compile Include="DAL_Khachhang.cs" />
     <Compile Include="DAL_Login.cs" />
     <Compile Include="DAL_Danhsachmon.cs" />
     <Compile Include="DAL_Nhanvien.cs" />
