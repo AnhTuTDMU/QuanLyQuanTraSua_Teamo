@@ -25,8 +25,8 @@ namespace GUI
             {
                 string ten = txt_TenKH.Text;
                 string sdt = txt_Sdt.Text;
-                int diem = Convert.ToInt32(txt_Diem.Text);
-                DTO_KhachHang khachHang = new DTO_KhachHang(ten,sdt,diem);
+
+                DTO_KhachHang khachHang = new DTO_KhachHang(ten,sdt);
                 BUS_Khachhang.Instance.Them_Khachhang(khachHang);
                 MessageBox.Show("Thêm khách hàng " + txt_TenKH.Text + " thành công ");
             }

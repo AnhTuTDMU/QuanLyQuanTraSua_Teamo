@@ -61,9 +61,10 @@ namespace GUI
             // lbl_MaNV
             // 
             this.lbl_MaNV.AutoSize = true;
+            this.lbl_MaNV.BackColor = System.Drawing.Color.Transparent;
             this.lbl_MaNV.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_MaNV.Location = new System.Drawing.Point(235, 89);
+            this.lbl_MaNV.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_MaNV.Location = new System.Drawing.Point(256, 87);
             this.lbl_MaNV.Name = "lbl_MaNV";
             this.lbl_MaNV.Size = new System.Drawing.Size(129, 25);
             this.lbl_MaNV.TabIndex = 0;
@@ -72,9 +73,10 @@ namespace GUI
             // lbl_Tennv
             // 
             this.lbl_Tennv.AutoSize = true;
+            this.lbl_Tennv.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Tennv.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Tennv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_Tennv.Location = new System.Drawing.Point(235, 149);
+            this.lbl_Tennv.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_Tennv.Location = new System.Drawing.Point(255, 148);
             this.lbl_Tennv.Name = "lbl_Tennv";
             this.lbl_Tennv.Size = new System.Drawing.Size(130, 25);
             this.lbl_Tennv.TabIndex = 1;
@@ -83,9 +85,10 @@ namespace GUI
             // lbl_Email
             // 
             this.lbl_Email.AutoSize = true;
+            this.lbl_Email.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Email.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_Email.Location = new System.Drawing.Point(235, 227);
+            this.lbl_Email.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_Email.Location = new System.Drawing.Point(256, 226);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(59, 25);
             this.lbl_Email.TabIndex = 2;
@@ -94,9 +97,10 @@ namespace GUI
             // lbl_Sdt
             // 
             this.lbl_Sdt.AutoSize = true;
+            this.lbl_Sdt.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Sdt.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Sdt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_Sdt.Location = new System.Drawing.Point(235, 298);
+            this.lbl_Sdt.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_Sdt.Location = new System.Drawing.Point(255, 296);
             this.lbl_Sdt.Name = "lbl_Sdt";
             this.lbl_Sdt.Size = new System.Drawing.Size(125, 25);
             this.lbl_Sdt.TabIndex = 3;
@@ -105,9 +109,10 @@ namespace GUI
             // lbl_Vaitro
             // 
             this.lbl_Vaitro.AutoSize = true;
+            this.lbl_Vaitro.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Vaitro.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Vaitro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_Vaitro.Location = new System.Drawing.Point(235, 366);
+            this.lbl_Vaitro.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_Vaitro.Location = new System.Drawing.Point(255, 364);
             this.lbl_Vaitro.Name = "lbl_Vaitro";
             this.lbl_Vaitro.Size = new System.Drawing.Size(68, 25);
             this.lbl_Vaitro.TabIndex = 4;
@@ -119,9 +124,10 @@ namespace GUI
             this.lblcontrol_Manv.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblcontrol_Manv.Appearance.Options.UseFont = true;
             this.lblcontrol_Manv.Appearance.Options.UseForeColor = true;
+            this.lblcontrol_Manv.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.lblcontrol_Manv.Location = new System.Drawing.Point(27, 89);
             this.lblcontrol_Manv.Name = "lblcontrol_Manv";
-            this.lblcontrol_Manv.Size = new System.Drawing.Size(137, 25);
+            this.lblcontrol_Manv.Size = new System.Drawing.Size(139, 27);
             this.lblcontrol_Manv.TabIndex = 5;
             this.lblcontrol_Manv.Text = "Mã nhân viên";
             // 
@@ -131,9 +137,10 @@ namespace GUI
             this.lblcontrol_Tennv.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblcontrol_Tennv.Appearance.Options.UseFont = true;
             this.lblcontrol_Tennv.Appearance.Options.UseForeColor = true;
+            this.lblcontrol_Tennv.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.lblcontrol_Tennv.Location = new System.Drawing.Point(24, 148);
             this.lblcontrol_Tennv.Name = "lblcontrol_Tennv";
-            this.lblcontrol_Tennv.Size = new System.Drawing.Size(140, 25);
+            this.lblcontrol_Tennv.Size = new System.Drawing.Size(142, 27);
             this.lblcontrol_Tennv.TabIndex = 6;
             this.lblcontrol_Tennv.Text = "Tên nhân viên";
             // 
@@ -143,9 +150,10 @@ namespace GUI
             this.lblcontrol_Email.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblcontrol_Email.Appearance.Options.UseFont = true;
             this.lblcontrol_Email.Appearance.Options.UseForeColor = true;
+            this.lblcontrol_Email.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.lblcontrol_Email.Location = new System.Drawing.Point(31, 226);
             this.lblcontrol_Email.Name = "lblcontrol_Email";
-            this.lblcontrol_Email.Size = new System.Drawing.Size(56, 25);
+            this.lblcontrol_Email.Size = new System.Drawing.Size(58, 27);
             this.lblcontrol_Email.TabIndex = 7;
             this.lblcontrol_Email.Text = "Email";
             // 
@@ -155,9 +163,10 @@ namespace GUI
             this.lblcontrol_Sdt.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblcontrol_Sdt.Appearance.Options.UseFont = true;
             this.lblcontrol_Sdt.Appearance.Options.UseForeColor = true;
+            this.lblcontrol_Sdt.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.lblcontrol_Sdt.Location = new System.Drawing.Point(31, 297);
             this.lblcontrol_Sdt.Name = "lblcontrol_Sdt";
-            this.lblcontrol_Sdt.Size = new System.Drawing.Size(133, 26);
+            this.lblcontrol_Sdt.Size = new System.Drawing.Size(135, 28);
             this.lblcontrol_Sdt.TabIndex = 8;
             this.lblcontrol_Sdt.Text = "Số điện thoại";
             // 
@@ -167,9 +176,10 @@ namespace GUI
             this.lblcontrol_Vaitro.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblcontrol_Vaitro.Appearance.Options.UseFont = true;
             this.lblcontrol_Vaitro.Appearance.Options.UseForeColor = true;
+            this.lblcontrol_Vaitro.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.lblcontrol_Vaitro.Location = new System.Drawing.Point(31, 366);
             this.lblcontrol_Vaitro.Name = "lblcontrol_Vaitro";
-            this.lblcontrol_Vaitro.Size = new System.Drawing.Size(69, 25);
+            this.lblcontrol_Vaitro.Size = new System.Drawing.Size(71, 27);
             this.lblcontrol_Vaitro.TabIndex = 9;
             this.lblcontrol_Vaitro.Text = "Vai trò";
             // 
@@ -181,8 +191,13 @@ namespace GUI
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.separatorControl5);
             this.panel1.Controls.Add(this.separatorControl4);
+            this.panel1.Controls.Add(this.lbl_Tennv);
             this.panel1.Controls.Add(this.separatorControl3);
+            this.panel1.Controls.Add(this.lbl_Email);
+            this.panel1.Controls.Add(this.lbl_MaNV);
+            this.panel1.Controls.Add(this.lbl_Sdt);
             this.panel1.Controls.Add(this.separatorControl6);
+            this.panel1.Controls.Add(this.lbl_Vaitro);
             this.panel1.Controls.Add(this.separatorControl2);
             this.panel1.Controls.Add(this.separatorControl1);
             this.panel1.Controls.Add(this.lblcontrol_Vaitro);
@@ -190,11 +205,6 @@ namespace GUI
             this.panel1.Controls.Add(this.lblcontrol_Email);
             this.panel1.Controls.Add(this.lblcontrol_Tennv);
             this.panel1.Controls.Add(this.lblcontrol_Manv);
-            this.panel1.Controls.Add(this.lbl_Vaitro);
-            this.panel1.Controls.Add(this.lbl_Sdt);
-            this.panel1.Controls.Add(this.lbl_Email);
-            this.panel1.Controls.Add(this.lbl_Tennv);
-            this.panel1.Controls.Add(this.lbl_MaNV);
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(12, 179);
             this.panel1.Name = "panel1";
@@ -261,7 +271,7 @@ namespace GUI
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(77, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(83, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(356, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -274,7 +284,9 @@ namespace GUI
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 613);
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
+            this.ClientSize = new System.Drawing.Size(511, 613);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

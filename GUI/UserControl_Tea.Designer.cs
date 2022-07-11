@@ -46,9 +46,9 @@ namespace GUI
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 43);
+            this.panel1.Location = new System.Drawing.Point(20, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 295);
+            this.panel1.Size = new System.Drawing.Size(344, 304);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -58,7 +58,7 @@ namespace GUI
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 291);
+            this.pictureBox1.Size = new System.Drawing.Size(340, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -75,7 +75,7 @@ namespace GUI
             this.lbl_Gia.Appearance.Options.UseBorderColor = true;
             this.lbl_Gia.Appearance.Options.UseFont = true;
             this.lbl_Gia.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.lbl_Gia.Location = new System.Drawing.Point(5, 342);
+            this.lbl_Gia.Location = new System.Drawing.Point(3, 349);
             this.lbl_Gia.Name = "lbl_Gia";
             this.lbl_Gia.Size = new System.Drawing.Size(99, 35);
             this.lbl_Gia.TabIndex = 1;
@@ -91,7 +91,7 @@ namespace GUI
             this.lbl_Title.Appearance.Options.UseBorderColor = true;
             this.lbl_Title.Appearance.Options.UseFont = true;
             this.lbl_Title.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lbl_Title.Location = new System.Drawing.Point(5, 5);
+            this.lbl_Title.Location = new System.Drawing.Point(3, 3);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(203, 34);
             this.lbl_Title.TabIndex = 1;
@@ -100,22 +100,22 @@ namespace GUI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.lbl_Title);
             this.panel2.Controls.Add(this.lbl_Gia);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(378, 384);
+            this.panel2.Size = new System.Drawing.Size(405, 391);
             this.panel2.TabIndex = 2;
             // 
             // UserControl_Tea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel2);
             this.Name = "UserControl_Tea";
-            this.Size = new System.Drawing.Size(385, 392);
+            this.Size = new System.Drawing.Size(408, 399);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

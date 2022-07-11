@@ -31,11 +31,9 @@ namespace GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_KhachHang));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.btn_Themkhachhang = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_Diem = new System.Windows.Forms.TextBox();
             this.txt_Sdt = new System.Windows.Forms.TextBox();
             this.txt_TenKH = new System.Windows.Forms.TextBox();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
@@ -46,28 +44,15 @@ namespace GUI
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btn_Themkhachhang);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txt_Diem);
             this.panel1.Controls.Add(this.txt_Sdt);
             this.panel1.Controls.Add(this.txt_TenKH);
             this.panel1.Location = new System.Drawing.Point(12, 46);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(699, 164);
             this.panel1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(48, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Điểm tích lũy";
             // 
             // btn_Themkhachhang
             // 
@@ -76,7 +61,7 @@ namespace GUI
             this.btn_Themkhachhang.ForeColor = System.Drawing.Color.Black;
             this.btn_Themkhachhang.Image = ((System.Drawing.Image)(resources.GetObject("btn_Themkhachhang.Image")));
             this.btn_Themkhachhang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Themkhachhang.Location = new System.Drawing.Point(551, 43);
+            this.btn_Themkhachhang.Location = new System.Drawing.Point(564, 98);
             this.btn_Themkhachhang.Name = "btn_Themkhachhang";
             this.btn_Themkhachhang.Size = new System.Drawing.Size(128, 59);
             this.btn_Themkhachhang.TabIndex = 2;
@@ -90,7 +75,7 @@ namespace GUI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(48, 78);
+            this.label2.Location = new System.Drawing.Point(48, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 24);
             this.label2.TabIndex = 1;
@@ -107,20 +92,10 @@ namespace GUI
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên khách hàng";
             // 
-            // txt_Diem
-            // 
-            this.txt_Diem.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Diem.Location = new System.Drawing.Point(246, 111);
-            this.txt_Diem.Name = "txt_Diem";
-            this.txt_Diem.Size = new System.Drawing.Size(46, 35);
-            this.txt_Diem.TabIndex = 0;
-            this.txt_Diem.Text = "0";
-            this.txt_Diem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txt_Sdt
             // 
             this.txt_Sdt.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Sdt.Location = new System.Drawing.Point(246, 67);
+            this.txt_Sdt.Location = new System.Drawing.Point(246, 88);
             this.txt_Sdt.Name = "txt_Sdt";
             this.txt_Sdt.Size = new System.Drawing.Size(245, 35);
             this.txt_Sdt.TabIndex = 0;
@@ -150,7 +125,7 @@ namespace GUI
             this.Controls.Add(this.separatorControl1);
             this.Controls.Add(this.panel1);
             this.Name = "GUI_KhachHang";
-            this.Text = "GUI_KhachHang";
+            this.Text = "Thêm khách hàng";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
@@ -165,9 +140,7 @@ namespace GUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Sdt;
         private System.Windows.Forms.TextBox txt_TenKH;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_Themkhachhang;
-        private System.Windows.Forms.TextBox txt_Diem;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
     }
 }

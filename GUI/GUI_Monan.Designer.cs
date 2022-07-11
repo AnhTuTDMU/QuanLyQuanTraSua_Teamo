@@ -497,6 +497,9 @@ namespace GUI
             // 
             // panelControl4
             // 
+            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.panelControl4.ContentImage = ((System.Drawing.Image)(resources.GetObject("panelControl4.ContentImage")));
+            this.panelControl4.ContentImageAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.panelControl4.Controls.Add(this.separatorControl6);
             this.panelControl4.Controls.Add(this.separatorControl4);
             this.panelControl4.Controls.Add(this.labelControl4);

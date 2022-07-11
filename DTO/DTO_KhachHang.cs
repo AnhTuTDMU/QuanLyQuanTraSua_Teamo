@@ -16,19 +16,16 @@ namespace DTO
             private set { instance = value; }
         }
         private DTO_KhachHang() { }
-        public DTO_KhachHang(string tenkH, string sdt, int tichdiem)
+        public DTO_KhachHang(string tenkH, string sdt)
         {
             this.tenkH = tenkH;
             this.sdt = sdt;
-            this.tichdiem = tichdiem;
         }
         private string tenkH;
         private string sdt;
-        private int tichdiem;
 
         public string TenkH { get => tenkH; set => tenkH = value; }
         public string Sdt { get => sdt; set => sdt = value; }
-        public int Tichdiem { get => tichdiem; set => tichdiem = value; }
 
     }
 }

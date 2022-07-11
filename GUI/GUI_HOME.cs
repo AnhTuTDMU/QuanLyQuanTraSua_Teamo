@@ -710,6 +710,7 @@ namespace GUI
             {
                 DataTable tb = BUS_Khachhang.Instance.Xem_Khachhang(txt_SDT.Text);
                 MessageBox.Show("Chào " + tb.Rows[0]["TenKhachang"].ToString());
+             
             }
             else
             {

@@ -30,7 +30,7 @@ namespace DAL
 
             command.Parameters["@ten"].Value = KH.TenkH;
             command.Parameters["@sdt"].Value = KH.Sdt;
-            command.Parameters["@tichdiem"].Value = KH.Tichdiem;
+          
        
 
             Conn.Open();

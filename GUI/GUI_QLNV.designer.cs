@@ -351,9 +351,9 @@ namespace GUI
             this.lbltim.ForeColor = System.Drawing.Color.Black;
             this.lbltim.Location = new System.Drawing.Point(9, 15);
             this.lbltim.Name = "lbltim";
-            this.lbltim.Size = new System.Drawing.Size(260, 24);
+            this.lbltim.Size = new System.Drawing.Size(255, 24);
             this.lbltim.TabIndex = 13;
-            this.lbltim.Text = "Nhập mã sinh viên cần tìm :";
+            this.lbltim.Text = "Nhập mã nhân viên cần tìm";
             // 
             // btntim
             // 
