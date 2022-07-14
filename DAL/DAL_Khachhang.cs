@@ -26,7 +26,7 @@ namespace DAL
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("@ten", SqlDbType.NVarChar, 50);
             command.Parameters.Add("@sdt", SqlDbType.NVarChar, 10);
-            command.Parameters.Add("@tichdiem", SqlDbType.Int, 50);
+        
 
             command.Parameters["@ten"].Value = KH.TenkH;
             command.Parameters["@sdt"].Value = KH.Sdt;
@@ -76,6 +76,18 @@ namespace DAL
             Conn.Close();
             return dt;
         }
-
+        public DataTable Xem_TT_TatcaKH()
+        {
+            SqlConnection Conn = ConnecData.conncetion();
+            SqlCommand command = new SqlCommand("proc_XemTT_tatcaKH", Conn);
+            command.CommandType = CommandType.StoredProcedure;
+            Conn.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = command;
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            Conn.Close();
+            return dt;
+        }
     }
 }

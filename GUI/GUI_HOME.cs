@@ -16,11 +16,13 @@ namespace GUI
 {
     public partial class GUI_HOME : DevExpress.XtraEditors.XtraForm
     {
-        
-        public GUI_HOME()
+        string tennv = "";
+        public GUI_HOME(string ten)
         {
             InitializeComponent();
-            
+            this.tennv = ten;
+            DataTable dt = BUS_Nhanvien.Instance.Xem_TTNV(ten);
+            lbl_Ten.Text = dt.Rows[0]["Ten_Nhanvien"].ToString();
         }
         
         #region
@@ -100,9 +102,15 @@ namespace GUI
             this.btn_Topping = new System.Windows.Forms.Button();
             this.btn_Anvat = new System.Windows.Forms.Button();
             this.panel_top = new DevExpress.XtraEditors.PanelControl();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.lbl_Ten = new System.Windows.Forms.Label();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel_right = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.lbl_Tenkhachhang = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.btn_checkSdt = new System.Windows.Forms.Button();
             this.txt_SDT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -127,10 +135,12 @@ namespace GUI
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel_top)).BeginInit();
             this.panel_top.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel_right)).BeginInit();
             this.panel_right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachmon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -246,11 +256,51 @@ namespace GUI
             this.panel_top.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel_top.Appearance.Options.UseBackColor = true;
             this.panel_top.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.panel_top.Controls.Add(this.panel2);
             this.panel_top.Controls.Add(this.labelControl1);
             this.panel_top.Location = new System.Drawing.Point(235, 0);
             this.panel_top.Name = "panel_top";
             this.panel_top.Size = new System.Drawing.Size(1047, 66);
             this.panel_top.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.labelControl3);
+            this.panel2.Controls.Add(this.lbl_Ten);
+            this.panel2.Location = new System.Drawing.Point(722, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(320, 60);
+            this.panel2.TabIndex = 2;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.labelControl3.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl3.Appearance.Options.UseBackColor = true;
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
+            this.labelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.labelControl3.Location = new System.Drawing.Point(12, 11);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(122, 32);
+            this.labelControl3.TabIndex = 0;
+            this.labelControl3.Text = "Nhân viên";
+            // 
+            // lbl_Ten
+            // 
+            this.lbl_Ten.AutoSize = true;
+            this.lbl_Ten.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Ten.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_Ten.Location = new System.Drawing.Point(168, 16);
+            this.lbl_Ten.Name = "lbl_Ten";
+            this.lbl_Ten.Size = new System.Drawing.Size(137, 24);
+            this.lbl_Ten.TabIndex = 1;
+            this.lbl_Ten.Text = "Tên nhân viên";
             // 
             // labelControl1
             // 
@@ -293,6 +343,9 @@ namespace GUI
             // panelControl3
             // 
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl3.Controls.Add(this.lbl_Tenkhachhang);
+            this.panelControl3.Controls.Add(this.label3);
+            this.panelControl3.Controls.Add(this.separatorControl1);
             this.panelControl3.Controls.Add(this.btn_checkSdt);
             this.panelControl3.Controls.Add(this.txt_SDT);
             this.panelControl3.Controls.Add(this.label2);
@@ -301,10 +354,41 @@ namespace GUI
             this.panelControl3.Controls.Add(this.cbo_Giamgia);
             this.panelControl3.Controls.Add(this.txt_Tongtien);
             this.panelControl3.Controls.Add(this.btn_ThanhToan);
-            this.panelControl3.Location = new System.Drawing.Point(7, 451);
+            this.panelControl3.Location = new System.Drawing.Point(7, 416);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(518, 172);
+            this.panelControl3.Size = new System.Drawing.Size(518, 207);
             this.panelControl3.TabIndex = 3;
+            // 
+            // lbl_Tenkhachhang
+            // 
+            this.lbl_Tenkhachhang.AutoSize = true;
+            this.lbl_Tenkhachhang.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tenkhachhang.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_Tenkhachhang.Location = new System.Drawing.Point(173, 70);
+            this.lbl_Tenkhachhang.Name = "lbl_Tenkhachhang";
+            this.lbl_Tenkhachhang.Size = new System.Drawing.Size(114, 24);
+            this.lbl_Tenkhachhang.TabIndex = 11;
+            this.lbl_Tenkhachhang.Text = "Khách hàng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(33, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(114, 24);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Khách hàng";
+            // 
+            // separatorControl1
+            // 
+            this.separatorControl1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.separatorControl1.LineThickness = 3;
+            this.separatorControl1.Location = new System.Drawing.Point(15, 97);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(495, 20);
+            this.separatorControl1.TabIndex = 9;
             // 
             // btn_checkSdt
             // 
@@ -314,7 +398,7 @@ namespace GUI
             this.btn_checkSdt.Name = "btn_checkSdt";
             this.btn_checkSdt.Size = new System.Drawing.Size(93, 44);
             this.btn_checkSdt.TabIndex = 7;
-            this.btn_checkSdt.Text = "Tích điểm";
+            this.btn_checkSdt.Text = "Xem ";
             this.btn_checkSdt.UseVisualStyleBackColor = true;
             this.btn_checkSdt.Click += new System.EventHandler(this.btn_checkSdt_Click);
             // 
@@ -331,7 +415,7 @@ namespace GUI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(33, 16);
+            this.label2.Location = new System.Drawing.Point(33, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(235, 24);
             this.label2.TabIndex = 5;
@@ -342,7 +426,7 @@ namespace GUI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(228, 84);
+            this.label1.Location = new System.Drawing.Point(258, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 23);
             this.label1.TabIndex = 4;
@@ -351,11 +435,11 @@ namespace GUI
             // lbl_Giamgia
             // 
             this.lbl_Giamgia.AutoSize = true;
-            this.lbl_Giamgia.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Giamgia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Giamgia.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Giamgia.Location = new System.Drawing.Point(32, 79);
+            this.lbl_Giamgia.Location = new System.Drawing.Point(93, 129);
             this.lbl_Giamgia.Name = "lbl_Giamgia";
-            this.lbl_Giamgia.Size = new System.Drawing.Size(106, 29);
+            this.lbl_Giamgia.Size = new System.Drawing.Size(89, 24);
             this.lbl_Giamgia.TabIndex = 3;
             this.lbl_Giamgia.Text = "Giảm giá";
             // 
@@ -365,7 +449,7 @@ namespace GUI
             this.cbo_Giamgia.Items.AddRange(new object[] {
             "0",
             "10"});
-            this.cbo_Giamgia.Location = new System.Drawing.Point(158, 83);
+            this.cbo_Giamgia.Location = new System.Drawing.Point(188, 129);
             this.cbo_Giamgia.Name = "cbo_Giamgia";
             this.cbo_Giamgia.Size = new System.Drawing.Size(64, 24);
             this.cbo_Giamgia.TabIndex = 2;
@@ -377,7 +461,7 @@ namespace GUI
             this.txt_Tongtien.BackColor = System.Drawing.Color.White;
             this.txt_Tongtien.Enabled = false;
             this.txt_Tongtien.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.txt_Tongtien.Location = new System.Drawing.Point(28, 122);
+            this.txt_Tongtien.Location = new System.Drawing.Point(37, 164);
             this.txt_Tongtien.Name = "txt_Tongtien";
             this.txt_Tongtien.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_Tongtien.Size = new System.Drawing.Size(250, 38);
@@ -390,7 +474,7 @@ namespace GUI
             this.btn_ThanhToan.ForeColor = System.Drawing.Color.Black;
             this.btn_ThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThanhToan.Image")));
             this.btn_ThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(341, 104);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(341, 146);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.Size = new System.Drawing.Size(172, 56);
             this.btn_ThanhToan.TabIndex = 0;
@@ -409,7 +493,7 @@ namespace GUI
             this.panel1.Controls.Add(this.dataGridView_DanhSachmon);
             this.panel1.Location = new System.Drawing.Point(5, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(520, 361);
+            this.panel1.Size = new System.Drawing.Size(520, 326);
             this.panel1.TabIndex = 2;
             // 
             // dataGridView_DanhSachmon
@@ -434,14 +518,13 @@ namespace GUI
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView_DanhSachmon.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView_DanhSachmon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_DanhSachmon.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView_DanhSachmon.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_DanhSachmon.Name = "dataGridView_DanhSachmon";
             this.dataGridView_DanhSachmon.RowHeadersVisible = false;
             this.dataGridView_DanhSachmon.RowHeadersWidth = 51;
             this.dataGridView_DanhSachmon.RowTemplate.Height = 24;
-            this.dataGridView_DanhSachmon.Size = new System.Drawing.Size(520, 361);
+            this.dataGridView_DanhSachmon.Size = new System.Drawing.Size(520, 315);
             this.dataGridView_DanhSachmon.TabIndex = 0;
             // 
             // Ten_Mon
@@ -510,7 +593,7 @@ namespace GUI
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.labelControl2.Location = new System.Drawing.Point(28, 14);
+            this.labelControl2.Location = new System.Drawing.Point(15, 13);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(148, 34);
             this.labelControl2.TabIndex = 0;
@@ -556,11 +639,14 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.panel_top)).EndInit();
             this.panel_top.ResumeLayout(false);
             this.panel_top.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panel_right)).EndInit();
             this.panel_right.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachmon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -671,7 +757,19 @@ namespace GUI
                 }
                 TongTien();
             }
+        private void btn_checkSdt_Click(object sender, EventArgs e)
+        {
+            if (BUS_Khachhang.Instance.XemTT_Khachhang(txt_SDT.Text))
+            {
+                DataTable tb = BUS_Khachhang.Instance.Xem_Khachhang(txt_SDT.Text);
+                lbl_Tenkhachhang.Text = tb.Rows[0]["TenKhachang"].ToString();
 
+            }
+            else
+            {
+                MessageBox.Show("Khách hàng này không tồn tại", "Thông báo !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btn_ThanhToan_Click(object sender, EventArgs e)
         {
             int tong = 0;
@@ -680,13 +778,18 @@ namespace GUI
                 MessageBox.Show("Vui lòng chọn giảm giá hay không ");
                 return;
             }
-            BUS_Hoadon.Instance.Luu_IdBill(DateTime.Now,int.Parse(cbo_Giamgia.SelectedItem.ToString()),tong); // lưu vào hoadon(id tự tăng)
+            else if(txt_Tongtien.Text == "0")
+            {
+                return;
+            }
+            BUS_Hoadon.Instance.Luu_IdBill(DateTime.Now,int.Parse(cbo_Giamgia.SelectedItem.ToString()),tong,lbl_Ten.Text,lbl_Tenkhachhang.Text); // lưu vào hoadon(id tự tăng)
             DataTable tb = BUS_Hoadon.Instance.Lay_IdBill();
             int idbill = int.Parse(tb.Rows[0].ItemArray[0].ToString());
             for (int i = 0; i < dataGridView_DanhSachmon.Rows.Count; i++)
             {
                 BUS_Hoadon.Instance.Luu_Bill(idbill,dataGridView_DanhSachmon.Rows[i].Cells[0].Value.ToString(), int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[1].Value.ToString()), int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[2].Value.ToString()),int.Parse(cbo_Giamgia.SelectedItem.ToString()), int.Parse(dataGridView_DanhSachmon.Rows[i].Cells[3].Value.ToString()));
             }
+
             MessageBox.Show("Thanh toán thành công " + "Tổng tiền là : " + txt_Tongtien.Text);
             tong = int.Parse(txt_Tongtien.Text);
             BUS_Hoadon.Instance.Capnhat_TongTien(idbill, tong); // update tổng tiền xuống hoadon
@@ -695,6 +798,8 @@ namespace GUI
             report.ShowDialog();
             dataGridView_DanhSachmon.Rows.Clear();
             txt_Tongtien.Text = "0";
+            lbl_Tenkhachhang.Text = "Khách hàng";
+            txt_SDT.Text = "";
         }
         
         public Image byteImage(byte[] byteArrayIn) // hàm lấy load ảnh lên từ sql
@@ -704,18 +809,6 @@ namespace GUI
             return returnImage;
         }
 
-        private void btn_checkSdt_Click(object sender, EventArgs e)
-        {
-            if(BUS_Khachhang.Instance.XemTT_Khachhang(txt_SDT.Text))
-            {
-                DataTable tb = BUS_Khachhang.Instance.Xem_Khachhang(txt_SDT.Text);
-                MessageBox.Show("Chào " + tb.Rows[0]["TenKhachang"].ToString());
-             
-            }
-            else
-            {
-                MessageBox.Show("Khách hàng này không tồn tại","Thông báo !",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-        }
+       
     }
 }

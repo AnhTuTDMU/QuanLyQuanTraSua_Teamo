@@ -36,6 +36,12 @@ namespace GUI
         private System.Windows.Forms.Button btn_checkSdt;
         private System.Windows.Forms.TextBox txt_SDT;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_Ten;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
+        private System.Windows.Forms.Label lbl_Tenkhachhang;
+        private System.Windows.Forms.Label label3;
         // private UserControl_Tea userControl_Tea2;
         //private UserControl_Tea userControl_Tea3;
         // private UserControl_Tea userControl_Tea4;

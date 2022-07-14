@@ -29,9 +29,9 @@ namespace BUS
            return DAL_Hoadon.Instance.Xem_Bill(id);
         }
         // Lưu bill xuống bảng hoadon
-        public void Luu_IdBill(DateTime ngaylapbill,int giamgia,int tt)
+        public void Luu_IdBill(DateTime ngaylapbill,int giamgia,int tt,string ten_nv,string ten_Kh)
         {
-            DAL_Hoadon.Instance.Luu_idBill(ngaylapbill,giamgia,tt);
+            DAL_Hoadon.Instance.Luu_idBill(ngaylapbill,giamgia,tt,ten_nv,ten_Kh);
         }
         // Lấy id bill từ hoadon
         public DataTable Lay_IdBill()

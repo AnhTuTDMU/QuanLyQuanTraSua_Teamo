@@ -31,5 +31,9 @@ namespace BUS
         {
             return DAL_Khachhang.Instance.Xem_Khachhang(sdt);
         }
+        public DataTable Xem_TT_TatcaKH()
+        {
+            return DAL_Khachhang.Instance.Xem_TT_TatcaKH();
+        }
     }
 }

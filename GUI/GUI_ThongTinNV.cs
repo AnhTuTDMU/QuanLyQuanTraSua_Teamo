@@ -19,11 +19,11 @@ namespace GUI
             InitializeComponent();
             this.ten = ten;
             DataTable tb = BUS_Nhanvien.Instance.Xem_TTNV(ten);
-            lbl_MaNV.Text = tb.Rows[0]["Mã nhân viên"].ToString();
-            lbl_Tennv.Text = tb.Rows[0]["Tên nhân viên"].ToString();
+            lbl_MaNV.Text = tb.Rows[0]["Ma_Nhanvien"].ToString();
+            lbl_Tennv.Text = tb.Rows[0]["Ten_Nhanvien"].ToString();
             lbl_Email.Text = tb.Rows[0]["Email"].ToString();
-            lbl_Sdt.Text = tb.Rows[0]["Số điện thoại"].ToString();
-            if (int.Parse(tb.Rows[0]["Quyền"].ToString()) == 1)
+            lbl_Sdt.Text = tb.Rows[0]["Sodienthoai"].ToString();
+            if (int.Parse(tb.Rows[0]["Quyen"].ToString()) == 1)
             {
                 lbl_Vaitro.Text = "Admin";
             }

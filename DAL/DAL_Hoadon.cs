@@ -59,7 +59,7 @@ namespace DAL
             
         }
         // lưu id bill vào bảng hoadon
-        public void Luu_idBill(DateTime Ngaylapbill,int giamgia,int TT)
+        public void Luu_idBill(DateTime Ngaylapbill,int giamgia,int TT,string ten_nv,string ten_KH)
         {
 
             SqlConnection Conn = ConnecData.conncetion();
@@ -68,10 +68,15 @@ namespace DAL
             command.Parameters.Add("@ngaylapbill", SqlDbType.DateTime);
             command.Parameters.Add("@giamgia", SqlDbType.Int);
             command.Parameters.Add("@TT", SqlDbType.Int);
+            command.Parameters.Add("@Ten_nv", SqlDbType.NVarChar);
+            command.Parameters.Add("@Ten_KH", SqlDbType.NVarChar);
 
             command.Parameters["@ngaylapbill"].Value = Ngaylapbill;
             command.Parameters["@giamgia"].Value = giamgia;
             command.Parameters["@TT"].Value = TT;
+            command.Parameters["@Ten_nv"].Value = ten_nv;
+            command.Parameters["@Ten_KH"].Value = ten_KH;
+
 
             Conn.Open();
             command.ExecuteNonQuery();

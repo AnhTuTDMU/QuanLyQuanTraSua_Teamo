@@ -127,6 +127,7 @@ namespace GUI
 
             try
             {
+
                 DataGridViewRow row = new DataGridViewRow();
                 row = dgvhienthi.Rows[e.RowIndex];
                 txtmanv.Text = row.Cells[0].Value.ToString();
@@ -135,7 +136,8 @@ namespace GUI
                 txtmatkhau.Text = row.Cells[3].Value.ToString();
                 txtemail.Text = row.Cells[4].Value.ToString();
                 txtsodt.Text = row.Cells[5].Value.ToString();
-                cbo_Quyen.Text = row.Cells[6].Value.ToString(); ///////////////////// chưa xử lý quyền truy cập 
+                cbo_Quyen.Text = row.Cells[6].Value.ToString();
+
             }
             catch { }
         }

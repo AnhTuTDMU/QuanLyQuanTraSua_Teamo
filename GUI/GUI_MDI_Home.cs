@@ -28,7 +28,7 @@ namespace GUI
             InitializeComponent();
             this.Ten_Dn = ten_Dn;
             DataTable tb = BUS_Nhanvien.Instance.Xem_TTNV(ten_Dn);
-            checkquyen = int.Parse(tb.Rows[0]["QUyền"].ToString());
+            checkquyen = int.Parse(tb.Rows[0]["Quyen"].ToString());
             if(checkquyen == 0)
             {
                 ribbonPage_Quanly.Visible = false;
@@ -44,7 +44,7 @@ namespace GUI
 
         private void barButtonItem_MENU_ItemClick(object sender, ItemClickEventArgs e)
         {
-            GUI_HOME gUI_Home = new GUI_HOME();
+            GUI_HOME gUI_Home = new GUI_HOME(Ten_Dn);
             gUI_Home.MdiParent = this;
             gUI_Home.Show();
         }
@@ -101,6 +101,12 @@ namespace GUI
         {
             GUI_KhachHang khachHang = new GUI_KhachHang();
             khachHang.ShowDialog();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            GUI_ThongtinKH gUI_ThongtinKH = new GUI_ThongtinKH();
+            gUI_ThongtinKH.ShowDialog();
         }
     }
 }

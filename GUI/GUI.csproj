@@ -152,6 +152,12 @@
     <Compile Include="GUI_Login.Designer.cs">
       <DependentUpon>GUI_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_ThongtinKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_ThongtinKH.Designer.cs">
+      <DependentUpon>GUI_ThongtinKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_ThongTinNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_Login.resx">
       <DependentUpon>GUI_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_ThongtinKH.resx">
+      <DependentUpon>GUI_ThongtinKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_ThongTinNV.resx">
       <DependentUpon>GUI_ThongTinNV.cs</DependentUpon>
